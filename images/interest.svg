@@ -1,0 +1,36 @@
+<svg width="51" height="39" viewBox="0 0 51 39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M1.213 0A1.2 1.2 0 0 0 0 1.186v21.359c0 .647.329 1.174.733 1.174h19.152c.405 0 .734-.527.734-1.174V1.185C20.62.532 20.076 0 19.406 0H1.213z" id="3ylukkgyba"/>
+        <path d="M1.213 0A1.2 1.2 0 0 0 0 1.186c0 .375.182.728.489.952l17.56 12.754a1.234 1.234 0 0 0 1.446 0L37.054 2.138a1.17 1.17 0 0 0 .25-1.66c-.228-.3-.59-.478-.973-.478H1.213z" id="4c4iyu0quc"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(9.733 .771)">
+            <mask id="s2tlb06v4b" fill="#fff">
+                <use xlink:href="#3ylukkgyba"/>
+            </mask>
+            <path fill="#D5D5EA" mask="url(#s2tlb06v4b)" d="M-1.213 24.905h23.045v-26.09H-1.213z"/>
+            <path stroke="#D5D5EA" mask="url(#s2tlb06v4b)" d="M-1.213 24.905h23.045v-26.09H-1.213z"/>
+            <path stroke="#D5D5EA" mask="url(#s2tlb06v4b)" d="M0 23.719h20.62V0H0z"/>
+        </g>
+        <path d="M10.466 24.49c-.405 0-.732-.525-.732-1.174V1.957A1.2 1.2 0 0 1 10.947.771H29.14c.67 0 1.213.532 1.213 1.186v21.359c0 .649-.329 1.174-.734 1.174H10.466z" stroke="#D5D5EA"/>
+        <g transform="translate(1.271 23.304)">
+            <mask id="zrmy7g4ejd" fill="#fff">
+                <use xlink:href="#4c4iyu0quc"/>
+            </mask>
+            <path fill="#D5D5EA" mask="url(#zrmy7g4ejd)" d="M-1.213 16.39h39.997V-1.186H-1.213z"/>
+            <path stroke="#D5D5EA" stroke-width="3" mask="url(#zrmy7g4ejd)" d="M-1.213 16.39h39.997V-1.186H-1.213z"/>
+        </g>
+        <path d="m20.766 38.196 17.559-12.754c.537-.391.65-1.133.25-1.659a1.22 1.22 0 0 0-.973-.479H2.484a1.2 1.2 0 0 0-1.213 1.186c0 .375.181.728.49.952l17.558 12.754c.43.312 1.018.312 1.447 0z" stroke="#D5D5EA"/>
+        <path d="m19.643.771.528 37.659s-.29.467 2.054-1.294c2.116-1.588 16.1-11.694 16.1-11.694s1.73-1.144 0-2.138l-7.972.012V1.957S30.318.771 29.14.771h-9.497z" stroke="#F2F2FD" fill="#F2F2FD"/>
+        <text stroke="#424A60" fill="#424A60" fill-rule="nonzero" font-family="Helvetica" font-size="16" transform="translate(1.271 .771)">
+                        <tspan x="14.643" y="23.882">₹</tspan>
+                    </text>
+        <g transform="translate(26.429 16.8)">
+            <ellipse fill="#FF9B00" cx="13.5" cy="10.686" rx="10.929" ry="10.686"/>
+            <ellipse fill="#FFB751" cx="10.929" cy="10.686" rx="10.929" ry="10.686"/>
+            <ellipse stroke="#FF9B00" cx="8.604" cy="9.09" rx="1.676" ry="2.691"/>
+            <ellipse stroke="#FF9B00" cx="15.132" cy="13.345" rx="1.676" ry="2.691"/>
+            <path stroke="#FF9B00" d="M15.676 4.303 8.06 17.068"/>
+        </g>
+    </g>
+</svg>

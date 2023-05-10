@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link href="main.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="custom-styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="bundle.js"></script>
+</head>
+
+<body style="background-color: #f5f5f5">
+  <div id="encash-form1">
+    <div class="py-3 d-flex bg-white align-items-center sbi-navbar">
+      <img src="./images/sbi-logo.webp" class="img-fluid" />
+      <div class="fw-bold sbi-exit-btn">Exit</div>
+    </div>
+
+    <div class="upper-section">
+      <div class="row m-0 gx-0 py-40 mx-auto">
+        <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
+          <img src="/images/encash-form1.png" class="img-fluid mr-20" style="width: 157px; height: 120px" />
+          <div class="left-label font-18 d-lg-block d-md-block d-sm-block d-lg-block d-none">Instant funds on your card
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
+          <div class="font-14 font-600 mb-3">Offer Benefits:</div>
+          <div class="d-flex align-items-center">
+            <img src="/images/badge.svg" class="img-fluid" />
+            <p class="my-0 mx-2">
+              Encash offer will be over and above your credit limit
+            </p>
+          </div>
+          <div class="d-flex align-items-center my-2">
+            <img src="/images/arrow.png" class="img-fluid" />
+            <p class="my-0 mx-2">Low rate of interest</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="/images/documentation.png" class="img-fluid" />
+            <p class="my-0 mx-2">Zero Documentation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower-section bg-white mx-auto py-20" style="min-height: calc(100vh - 280px);margin-bottom: 96px;">
+      <div class="font-18 font-600 mb-2 px-20 encash-title">Encash</div>
+      <p class="m-0 font-14 text-gray px-20">
+        You have a pre-approved Encash offer over & above your card’s limit at
+        nominal interest rate. Valid till Mar, 15 2022
+      </p>
+      <div class="header-border mt-20"></div>
+
+      <div class="flex">
+        <div class="px-40 position-relative stepper-line" style="width: fit-content;margin-top: 70px;">
+          <div id="stepper-progress-line"
+            style="border-left: 2px solid #a8a8a840;width: fit-content;margin-left: 7px; height: calc(100% - 45px);">
+          </div>
+        </div>
+
+        <div class="accordion accordion-flush w-100 my-30 mr-30" id="accordionFlushExample">
+          <div class="accordion-item position-relative">
+            <div class="stepper-bullets"
+              style="border:2px solid #00b1f2;height: 16px;width: 16px; border-radius: 50px;position: absolute; z-index: 10;top:26px;left: -49px;">
+            </div>
+            <div id="step-1-completed"
+              class="rounded-circle position-absolute flex align-items-center justify-content-center"
+              style="height: 16px;width: 16px;background-color: #00b1f2;z-index: 10;top:26px;left: -49px;opacity: 0;">
+              <img src="/images/tick.png" class="img-fluid" style="height: 12px; width: 10px;" />
+            </div>
+
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button id="accordion-btn1" class="accordion-button collapsed font-14 fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                1. Choose your plan
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show"
+              data-bs-parent="#accordionFlushExample">
+              <form name="form1" onsubmit="handleSubmit1();return false">
+                <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                  <div class="col-md-6 col-lg-6">
+                    <div class="text-gray mt-2">
+                      Use the sliders or input fields to change Amount and Tenure
+                    </div>
+
+                    <div class="mt-30">
+                      <div class="flex align-items-center mb-20">
+                        <img src="/images/money.svg" class="img-fluid money-icon" />
+                        <div class="mx-2 font-14">Select your Amount</div>
+                      </div>
+                      <input type="range" class="form-range" min="10" max="50" value="10" onchange="myRangeSlider()"
+                        id="amountSlider" />
+                      <div class="flex range-slider font-10 mt-1 text-gray">
+                        <div style="width: 25%">10k</div>
+                        <div style="width: 25%">20k</div>
+                        <div style="width: 25%">30k</div>
+                        <div style="width: 25%">40k</div>
+                        <div>50k</div>
+                      </div>
+                    </div>
+                    <label for="amount-slider-input"
+                      class="sbi-input-label mt-30 sbi-input-text mx-md-0 mx-lg-0 mx-auto" id="range-slider-input">
+                      <input type="number" name="slider-amount" id="slider-amount" class="bg-transparent font-28 mt-2"
+                        value="" oninput="InputAmountSlider()" />
+                      <span class="placeholder">Amount (₹)</span>
+                      <span id="formError1" class="text-danger font-10"></span>
+                    </label>
+
+                    <div class="mt-30">
+                      <div class="flex align-items-center mb-20">
+                        <img src="/images/time.svg" class="img-fluid money-icon" />
+                        <div class="mx-2 font-14">Select your Tenure</div>
+                      </div>
+                      <input type="range" class="form-range" min="0" max="24" onchange="myTenureSlider()" value="0"
+                        id="tenureSlider" />
+                      <div class="flex range-slider font-10 mt-1 text-gray">
+                        <div style="width: 25%">0</div>
+                        <div style="width: 25%">6</div>
+                        <div style="width: 25%">12</div>
+                        <div style="width: 25%">18</div>
+                        <div>24</div>
+                      </div>
+                      <div class="placeholder font-11 text-gray mt-20">Tenure (In months)</div>
+                      <select value="" id="tenure-slider-input" onchange="InputTenureSlider()"
+                        class="bg-white font-28 mt-2 w-100">
+                        <option>
+                          <div class="bg-white p-4">0</div>
+                        </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                      </select>
+                    </div>
+
+                    <div class="row gx-0 mt-5 font-11 text-gray">
+                      <div class="col-md-6 col-lg-6 col-sm-6">
+                        <div>One-time Processing Fee (₹)</div>
+                        <div class="font-28">0</div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 col-sm-6">
+                        <div>Rate of Interest (% p.a.)</div>
+                        <div class="font-28">0</div>
+                      </div>
+                    </div>
+
+                    <button type="submit" id="next-btn"
+                      class="sbi-button primary d-lg-block d-md-block d-none mt-20 mb-40" disabled>
+                      Next
+                    </button>
+                  </div>
+
+                  <div
+                    class="col-lg-6 col-md-6 justify-content-center flex flex-col align-items-center accordion-column2">
+                    <div class="text-center font-28 emi">EMI</div>
+                    <img src="/images/emi.svg" class="img-fluid my-20" />
+                    <div class="mb-2 font-28 rate" id="calculated-emi">₹ 0.00 /month*</div>
+                    <div class="text-grayLight font-14">*exclusive of applicable taxes</div>
+                  </div>
+                  <div style="padding-inline: 12px;">
+                    <button type="submit" id="next-sm-btn"
+                      class="sbi-button primary w-100 d-lg-none d-md-none d-block mt-20 mb-40" disabled>
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="accordion-item position-relative">
+            <div class="stepper-bullets"
+              style="border:2px solid #00b1f2;height: 16px;width: 16px; border-radius: 50px;position: absolute; z-index: 10;top:26px;left: -49px;">
+            </div>
+            <div id="step-2-completed"
+              class="rounded-circle position-absolute flex align-items-center justify-content-center"
+              style="height: 16px;width: 16px;background-color: #00b1f2;z-index: 10;top:26px;left: -49px;opacity: 0;">
+              <img src="/images/tick.png" class="img-fluid" style="height: 12px; width: 10px;" />
+            </div>
+
+            <div class="bg-white text-white h-100 position-absolute last-stepper" style="left: -43px;top: 27px">.</div>
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button id="accordion-btn2" class="accordion-button collapsed font-14 fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                2. Enter Your Payment Details (NEFT)
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                <form name="form2" id="form2" onsubmit="handleSubmit2();return false">
+                  <div class="col-md-6 col-lg-6">
+                    <label for="name" class="sbi-input-label sbi-input-text w-100" id="text-input">
+                      <input type="text" id="name" name="name" required>
+                      <span class="placeholder">Name</span>
+                      <span id="formError" class="text-danger font-10"></span>
+                    </label>
+
+                    <div class="placeholder font-11 text-gray mt-20">Bank A/C No.</div>
+                    <select value="" class="bg-white font-14 text-gray mt-2 w-100">
+                      <option selected>Select</option>
+                      <option>
+                        <div class="p-5 bg-white">
+                          asdsaddadasd
+                        </div>
+                      </option>
+                      <option>12</option>
+                      <option>18</option>
+                      <option>24</option>
+                    </select>
+
+                    <label for="confirmAccount" class="sbi-input-label mt-30 sbi-input-text w-100" id="input1">
+                      <input type="number" name="confirmAccount" id="confirmAccount" onchange="validateForm2()"
+                        required>
+                      <span class="placeholder">Confirm Bank A/c No.</span>
+                      <span id="formError2" class="font-10" style="color:red"></span>
+                    </label>
+                    <div class="position-relative mb-30 mt-20">
+                      <label for="neft" class="sbi-input-label sbi-input-text w-100" id="input2">
+                        <input type="text" name="input2" id="neft" required>
+                        <span class="placeholder">IFSC Code</span>
+                      </label>
+                      <div class="font-14 position-absolute find-your-ifsc top-0 mt-1">Find your IFSC Code
+                      </div>
+                    </div>
+
+                    <label for="bank-details" class="sbi-input-label sbi-input-text w-100" id="input3">
+                      <input type="text" name="input3" id="bank-details" required>
+                      <span class="placeholder">Bank Details</span>
+                    </label>
+
+                    <label for="sbi-sample" class="sbi-input-label mt-30 md-checkbox sbi-input-checkbox"
+                      id="sbi-terms-checkbox">
+                      <input type="checkbox" name="" value="" onchange="enableConfirmBtn()" id="sbi-sample">
+                      <label class="p-0" style="margin-top: 2px;">I agree to the <a href=""
+                          class="underlined text-dark">Terms and
+                          Conditions</a></label>
+                    </label>
+                    <button type="submit" id="confirm-btn" style="min-width: max-content;"
+                      class="sbi-button col-lg-2 col-md-2 primary d-lg-none d-md-none d-block mt-40 mb-0" disabled>
+                      Confirm
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="bottom-0 position-fixed w-100" style="z-index: 11;">
+      <div class="row d-lg-flex d-md-flex d-none gx-0 mx-0 py-4 align-items-center sbi-footer font-14"
+        style="background-color: #f2f7fd;max-width: 100% ;">
+        <div class="col-lg-2 px-0 col-md-2">
+          <div class="text-gray">Amount</div>
+          <div class="font-18" id="amount-slider-input-footer">₹ 10,000</div>
+        </div>
+        <div class="col-lg-2 px-0 col-md-2">
+          <div class="text-gray">Tenure Period</div>
+          <div class="font-18" id="tenure-period">-</div>
+        </div>
+        <div class="col-lg-2 px-0 col-md-2">
+          <div class="text-gray">Rate of Interest</div>
+          <div class="font-18">3.5% p.a.</div>
+        </div>
+        <div class="col-lg-2 px-0 col-md-2">
+          <div class="text-gray">Processing Fee</div>
+          <div class="font-18">₹ 499</div>
+        </div>
+        <div class="col-lg-2 px-0 col-md-2">
+          <div class="text-gray">EMI</div>
+          <div id="calculated-emi-footer" class="font-18">-</div>
+        </div>
+
+        <button type="submit" form="form2" id="confirm-sm-btn" style="min-width: max-content;"
+          class="sbi-button col-lg-2 col-md-2 primary mb-0" disabled>
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+  function setErrors(id, error) {
+    console.log(error);
+    if (id == "confirmAccount") {
+      document.getElementById("formError2").innerHTML = error
+    }
+    if (id == "slider-amount") {
+      document.getElementById("formError1").innerHTML = error
+    }
+
+  }
+  function validateForm1() {
+    var returnvalue = true
+    var amountSlider = document.forms["form1"]["slider-amount"]
+
+    if (amountSlider.value > 50000) {
+      setErrors("slider-amount", "Maximum amount must not exceed Rs. 50,000")
+      amountSlider.style.borderColor = "red"
+      return returnvalue = false;
+    } if (amountSlider.value < 10000) {
+      setErrors("slider-amount", "Amount must be Rs. 10,000 or higher")
+      amountSlider.style.borderColor = "red"
+      return returnvalue = false;
+    } else {
+      setErrors("slider-amount", "")
+      amountSlider.style.borderColor = ""
+    }
+  }
+  function validateForm2() {
+    var returnvalue = true
+    var confirmAccount = document.forms["form2"]["confirmAccount"]
+
+    if (confirmAccount.value.length < 9) {
+      setErrors("confirmAccount", "must be 9 to 18 characters long")
+      confirmAccount.style.borderColor = "red"
+      return returnvalue = false;
+    } else {
+      setErrors("confirmAccount", "")
+      confirmAccount.style.borderColor = ""
+    }
+  }
+
+
+
+
+
+  var Amount = document.getElementById("amountSlider");
+  var Tenure = document.getElementById("tenureSlider");
+  var tenureOutput = $("#tenure-slider-input")
+  var EMI = document.getElementById("calculated-emi")
+  var tenurePeriod = document.getElementById("tenure-period")
+  var EMIFooter = document.getElementById("calculated-emi-footer")
+  var amountOutput = document.getElementById("slider-amount");
+  var amountOutputFooter = document.getElementById("amount-slider-input-footer");
+  var nextBtn = document.getElementById("next-btn");
+  var confirmBtn = document.getElementById("confirm-btn");
+  var nextBtnMobile = document.getElementById("next-sm-btn");
+  var confirmBtnMobile = document.getElementById("confirm-sm-btn");
+  amountOutput.value = Amount.value * 1000;
+
+  function myRangeSlider() {
+    amountOutput.value = Amount.value * 1000;
+    amountOutputFooter.innerHTML = `₹ ${Amount.value * 1000}`;
+    nextBtn.removeAttribute("disabled")
+    nextBtnMobile.removeAttribute("disabled")
+  }
+  function InputAmountSlider() {
+    Amount.value = amountOutput.value / 1000;
+    amountOutputFooter.innerHTML = `₹ ${amountOutput.value}`;
+    nextBtn.removeAttribute("disabled")
+    nextBtnMobile.removeAttribute("disabled")
+    validateForm1()
+  }
+  function myTenureSlider() {
+    tenureOutput.val(Tenure.value)
+    EMI.innerHTML = `₹ ${(144.4 * Tenure.value).toFixed(2)} /month*`
+    EMIFooter.innerHTML = `₹ ${(144.4 * Tenure.value).toFixed(2)} /month`
+    tenurePeriod.innerHTML = `${Tenure.value == 0 ? "-" : (Tenure.value > 1 ? `${Tenure.value} months` : `${tenureOutput.val()} month`)}`
+    nextBtn.removeAttribute("disabled")
+    nextBtnMobile.removeAttribute("disabled")
+  }
+  function InputTenureSlider() {
+    Tenure.value = tenureOutput.val();
+    EMI.innerHTML = `₹ ${(144.4 * Tenure.value).toFixed(2)} /month*`
+    EMIFooter.innerHTML = `₹ ${(144.4 * Tenure.value).toFixed(2)} /month`
+    tenurePeriod.innerHTML = `${tenureOutput.val() == 0 ? "-" : (tenureOutput.val() > 1 ? `${tenureOutput.val()} months` : `${tenureOutput.val()} month`)}`
+    nextBtn.removeAttribute("disabled")
+    nextBtnMobile.removeAttribute("disabled")
+  }
+  function handleSubmit1(e) {
+    document.getElementById('accordion-btn2').click()
+    document.getElementById('step-1-completed').style.opacity = 1
+    document.getElementById('stepper-progress-line').style.borderColor = "#00b1f2"
+    document.getElementById('stepper-progress-line').style.borderWidth = "2px"
+  }
+  function enableConfirmBtn(e) {
+    confirmBtn.toggleAttribute("disabled")
+    confirmBtnMobile.toggleAttribute("disabled")
+  }
+  function handleSubmit2(e) {
+    document.getElementById('accordion-btn2').click()
+    document.getElementById('step-2-completed').style.opacity = 1
+    document.getElementById('stepper-progress-line').style.borderColor = "#00b1f2"
+    document.getElementById('stepper-progress-line').style.borderWidth = "2px"
+  }
+</script>
+
+</html>

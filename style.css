@@ -1,0 +1,261 @@
+/* --------------------------------------------------------------------------------------- */
+/* -----------------------------------------Login----------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+.sbi-cash-requirements img {
+  max-height: 35px;
+  margin-right: 24px;
+  max-width: 35px;
+}
+.sbi-cash-requirements > div {
+  font-size: 18px;
+  color: #8a8a96;
+}
+.sbi-cash-requirements p,
+.sbi-cash-requirements {
+  max-width: 405px;
+}
+.sbi-login-nav {
+  border-bottom: 1px solid #dadada;
+  padding-right: 130px;
+}
+.sbi-logo {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+#login-page .column1 {
+  background-color: #f2f7fd;
+}
+#login-page .row {
+  height: calc(100vh - 60px);
+}
+@media (max-width: 990px) {
+  .sbi-login-nav {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .sbi-login-nav {
+    border: none;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .sbi-cash-requirements {
+    font-size: 20px;
+  }
+  .sbi-cash-requirements p {
+    font-size: 20px;
+  }
+  .sbi-cash-requirements > div {
+    font-size: 14px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------Not Eligible------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+.sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+
+.sbi-benefit-items {
+  max-width: 180px;
+  display: block;
+}
+
+.sbi-benefit-items img {
+  max-width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.sbi-not-eligible-upper-section label {
+  max-width: 380px;
+  margin-top: 40px;
+  width: 100%;
+}
+.sbi-not-eligible-upper-section {
+  padding: 40px 80px;
+  background-color: #f2f7fd;
+}
+.sbi-not-eligible-upper-section p {
+  font-weight: 600;
+  max-width: 480px;
+}
+
+.sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+.sbi-not-eligible {
+  max-width: 1020px;
+  min-height: calc(100vh - 84px);
+}
+
+@media (max-width: 768px) {
+  .sbi-benefit-items {
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .sbi-benefit-items > div {
+    padding-left: 20px;
+  }
+  .sbi-not-eligible-upper-section {
+    padding: 30px 20px;
+    background-color: #f2f7fd;
+  }
+}
+@media (max-width: 576px) {
+  .sbi-submit-btn {
+    margin-right: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------Encash Form1------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+#encash-form1 .column2 img {
+  max-width: 22px;
+  max-height: 22px;
+}
+#encash-form1 .upper-section {
+  background-color: #f2f7fd;
+  box-shadow: 0 1px 10px 0 rgba(213, 213, 234, 0.81);
+}
+#encash-form1 .row {
+  max-width: 1020px;
+}
+#encash-form1 .sbi-navbar {
+  padding-inline: 130px;
+}
+#encash-form1 .sbi-footer {
+  padding-inline: 130px;
+}
+#encash-form1 .row .left-label {
+  max-width: 160px;
+}
+.lower-section {
+  margin-top: 30px;
+  max-width: 1020px;
+}
+.lower-section .header-border {
+  border: solid 1px #f2f2fd;
+}
+.lower-section .money-icon {
+  height: 20px;
+  width: 20px;
+}
+.lower-section #flush-collapseOne .sbi-input-text {
+  width: 100%;
+}
+
+.lower-section select {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.lower-section .find-your-ifsc {
+  color: #00b1f2;
+  right: 0;
+  cursor: pointer;
+}
+.lower-section .accordion-button {
+  padding: 1.5rem 0;
+}
+.lower-section .accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+#amountSlider::-webkit-slider-thumb,
+#tenureSlider::-webkit-slider-thumb {
+  background: white;
+  height: 21px;
+  width: 21px;
+  margin-top: -0.4rem !important;
+  box-shadow: -407px 0 0 400px #0bb4f2;
+}
+
+#amountSlider::-webkit-slider-runnable-track,
+#tenureSlider::-webkit-slider-runnable-track {
+  background: #f5f5f5;
+}
+
+input[type="range"] {
+  height: 8px;
+  appearance: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+@media (max-width: 1280px) {
+  #encash-form1 .sbi-footer {
+    max-width: 1020px;
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  #encash-form1 .sbi-navbar {
+    padding-inline: 20px;
+  }
+  #encash-form1 .sbi-footer {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lower-section .stepper-line {
+    padding-left: 12px;
+    padding-right: 20px;
+  }
+  .lower-section .stepper-bullets {
+    left: -29px !important;
+  }
+  .lower-section {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+  .lower-section .encash-title {
+    font-size: 20px;
+  }
+  .lower-section .last-stepper {
+    left: -23px !important;
+  }
+  .lower-section #step-1-completed,
+  .lower-section #step-2-completed {
+    left: -29px !important;
+  }
+
+  .lower-section .accordion {
+    margin-right: 12px;
+  }
+  .lower-section .accordion-body {
+    padding-right: 12px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #flush-collapseOne .accordion-column2 {
+    margin-top: 40px;
+  }
+  #flush-collapseOne .rate,
+  #flush-collapseOne .emi {
+    font-size: 20px;
+  }
+}
