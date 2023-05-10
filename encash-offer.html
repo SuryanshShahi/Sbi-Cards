@@ -630,7 +630,7 @@
         }
       }
       if (confirmAccount.value.length == 0) {
-        setErrors("confirmAccount", "must be 9 to 18 characters long");
+        setErrors("confirmAccount", "confirm account no. is required field");
         confirmAccount.style.borderColor = "red";
         confirmBtn.setAttribute("disabled", "");
         confirmBtnMobile.setAttribute("disabled", "");
@@ -667,7 +667,8 @@
       }
       return returnvalue;
     }
-
+    window.onpaint = myFn();
+    window.onload = document.getElementById("dropDown").click();
     var Amount = document.getElementById("amountSlider");
     var Tenure = document.getElementById("tenureSlider");
     var tenureOutput = $("#tenure-slider-input");
@@ -827,7 +828,6 @@
         }, 260);
       }
     }
-    window.onpaint = myFn();
-    window.onload = document.getElementById("dropDown").click();
+
   </script>
 </html>
