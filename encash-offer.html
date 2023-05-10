@@ -335,9 +335,18 @@
                       <div class="placeholder font-11 text-gray mb-10 mt-20">
                         Bank A/C No.
                       </div>
+
                       <div class="relative" id="custom-select-menu">
-                        <div class="flex btn" onclick="showDropdown()">
-                          <div name="accountNumber" id="accountNumber"></div>
+                        <div
+                          class="flex btn"
+                          id="dropDown"
+                          onclick="showDropdown()"
+                        >
+                          <div
+                            name="accountNumber"
+                            class="font-14"
+                            id="accountNumber"
+                          ></div>
                           <img
                             src="/images/arrow-down.svg"
                             id="arrow-down"
@@ -544,7 +553,7 @@
         (e, index) =>
           (document.getElementById(
             "dropdown-select-menu-item"
-          ).innerHTML += `<div data-index='${index}' class="cards flex align-items-center item1 p-2">
+          ).innerHTML += `<div data-index='${index}' class="cards flex align-items-center item p-2">
       <img src="/images/documentation.png" class="img-fluid"
       style="margin-right: 10px;height: 24px;width: 24px;" />
       <div>
@@ -819,5 +828,6 @@
       }
     }
     window.onpaint = myFn();
+    window.onload = document.getElementById("dropDown").click();
   </script>
 </html>
