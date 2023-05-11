@@ -115,6 +115,10 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .px-40 {
   padding-inline: 40px;
 }

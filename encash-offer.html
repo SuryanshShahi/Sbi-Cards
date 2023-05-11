@@ -21,6 +21,9 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <link href="main.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <link href="custom-styles.css" rel="stylesheet" />
@@ -33,421 +36,446 @@
         <img src="./images/sbi-logo.webp" class="img-fluid" />
         <div class="fw-bold sbi-exit-btn">Exit</div>
       </div>
-
-      <div class="upper-section">
-        <div class="row m-0 gx-0 py-40 mx-auto">
-          <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
-            <img
-              src="/images/encash-form1.png"
-              class="img-fluid mr-20 encash-logo"
-            />
-            <div
-              class="left-label font-18 d-lg-block d-md-block d-sm-block d-lg-block d-none"
-            >
-              Instant funds on your card
+      <div id="containment-wrapper">
+        <div class="upper-section">
+          <div class="row m-0 gx-0 py-40 mx-auto">
+            <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
+              <img
+                src="/images/encash-form1.png"
+                class="img-fluid mr-20 encash-logo"
+              />
+              <div
+                class="left-label font-18 d-lg-block d-md-block d-sm-block d-lg-block d-none"
+              >
+                Instant funds on your card
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
-            <div class="font-14 font-600 mb-3">Offer Benefits:</div>
-            <div class="d-flex align-items-center">
-              <img src="/images/badge.svg" class="img-fluid" />
-              <p class="my-0 mx-2">
-                Encash offer will be over and above your credit limit
-              </p>
-            </div>
-            <div class="d-flex align-items-center my-2">
-              <img src="/images/arrow.png" class="img-fluid" />
-              <p class="my-0 mx-2">Low rate of interest</p>
-            </div>
-            <div class="d-flex align-items-center">
-              <img src="/images/documentation.png" class="img-fluid" />
-              <p class="my-0 mx-2">Zero Documentation</p>
+            <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
+              <div class="font-14 font-600 mb-3">Offer Benefits:</div>
+              <div class="d-flex align-items-center">
+                <img src="/images/badge.svg" class="img-fluid" />
+                <p class="my-0 mx-2">
+                  Encash offer will be over and above your credit limit
+                </p>
+              </div>
+              <div class="d-flex align-items-center my-2">
+                <img src="/images/arrow.png" class="img-fluid" />
+                <p class="my-0 mx-2">Low rate of interest</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="/images/documentation.png" class="img-fluid" />
+                <p class="my-0 mx-2">Zero Documentation</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="lower-section bg-white mx-auto py-20">
-        <div class="font-18 font-600 mb-2 px-20 encash-title">Encash</div>
-        <p class="m-0 font-14 text-gray px-20">
-          You have a pre-approved Encash offer over & above your card’s limit at
-          nominal interest rate. Valid till Mar, 15 2022
-        </p>
-        <div class="header-border mt-20"></div>
-
-        <div class="flex">
-          <div class="px-40 position-relative stepper-line">
-            <div id="stepper-progress-line"></div>
-          </div>
-
+        <div id="draggable" class="draggable">
           <div
-            class="accordion accordion-flush w-100 my-30 mr-30"
-            id="accordionFlushExample"
+            class="flex justify-content-center bg-white w-100 py-10 d-sm-none d-lg-none d-md-none border"
           >
-            <div class="accordion-item position-relative">
-              <div class="stepper-bullets"></div>
-              <div
-                id="step-1-completed"
-                class="rounded-circle position-absolute flex align-items-center justify-content-center"
-              >
-                <img src="/images/tick.png" class="img-fluid" />
+            <img src="/images/dots.svg" class="img-fluid" />
+          </div>
+          <div class="lower-section bg-white mx-auto py-20">
+            <div class="font-18 font-600 mb-2 px-20 encash-title">Encash</div>
+            <p class="m-0 font-14 text-gray px-20">
+              You have a pre-approved Encash offer over & above your card’s
+              limit at nominal interest rate. Valid till Mar, 15 2022
+            </p>
+            <div class="header-border mt-20"></div>
+
+            <div class="flex">
+              <div class="px-40 position-relative stepper-line">
+                <div id="stepper-progress-line"></div>
               </div>
 
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  id="accordion-btn1"
-                  class="accordion-button collapsed font-14 fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="true"
-                  onclick="myFn()"
-                >
-                  1. Choose your plan
-                </button>
-              </h2>
               <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#accordionFlushExample"
+                class="accordion accordion-flush w-100 my-30 mr-30"
+                id="accordionFlushExample"
               >
-                <form name="form1" onsubmit="handleSubmit1();return false">
-                  <div class="accordion-body p-lg-0 p-md-0 row gx-0">
-                    <div class="col-md-6 col-lg-6">
-                      <div class="text-gray mt-2 font-14">
-                        Use the sliders or input fields to change Amount and
-                        Tenure
-                      </div>
+                <div class="accordion-item position-relative">
+                  <div class="stepper-bullets"></div>
+                  <div
+                    id="step-1-completed"
+                    class="rounded-circle position-absolute flex align-items-center justify-content-center"
+                  >
+                    <img src="/images/tick.png" class="img-fluid" />
+                  </div>
 
-                      <div class="mt-30">
-                        <div class="flex align-items-center mb-20">
-                          <img
-                            src="/images/money.svg"
-                            class="img-fluid money-icon"
-                          />
-                          <div class="mx-2 font-14">Select your Amount</div>
-                        </div>
-                        <input
-                          type="range"
-                          class="form-range"
-                          min="10"
-                          max="50"
-                          value="10"
-                          onchange="myRangeSlider()"
-                          id="amountSlider"
-                        />
-                        <div class="flex range-slider font-10 mt-1 text-gray">
-                          <div class="w-25">10k</div>
-                          <div class="w-25">20k</div>
-                          <div class="w-25">30k</div>
-                          <div class="w-25">40k</div>
-                          <div>50k</div>
-                        </div>
-                      </div>
-                      <label
-                        for="amount-slider-input"
-                        class="sbi-input-label mt-30 sbi-input-text mx-md-0 mx-lg-0 mx-auto"
-                        id="range-slider-input"
-                      >
-                        <input
-                          type="text"
-                          name="slider-amount"
-                          id="slider-amount"
-                          class="bg-transparent font-28 mt-2"
-                          value=""
-                          oninput="InputAmountSlider(),
-                          this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
-                          onKeyPress="if(this.value.length==10) return false;"
-                          autocomplete="off"
-                        />
-                        <span class="placeholder">Amount (₹)</span>
-                        <span
-                          id="formError1"
-                          class="text-danger font-10"
-                        ></span>
-                      </label>
-
-                      <div class="mt-30">
-                        <div class="flex align-items-center mb-20">
-                          <img
-                            src="/images/time.svg"
-                            class="img-fluid money-icon"
-                          />
-                          <div class="mx-2 font-14">Select your Tenure</div>
-                        </div>
-                        <input
-                          type="range"
-                          class="form-range"
-                          min="0"
-                          max="24"
-                          onchange="myTenureSlider()"
-                          value="0"
-                          id="tenureSlider"
-                        />
-                        <div class="flex range-slider font-10 mt-1 text-gray">
-                          <div class="w-25">0</div>
-                          <div class="w-25">6</div>
-                          <div class="w-25">12</div>
-                          <div class="w-25">18</div>
-                          <div>24</div>
-                        </div>
-                        <div class="placeholder font-11 text-gray mt-20">
-                          Tenure (In months)
-                        </div>
-                        <div class="relative mt-2" id="custom-select-tenure">
-                          <div class="flex customBtn" id="tenureDropdown">
-                            <div class="font-28 px-2" id="tenure-slider-input">
-                              0
-                            </div>
-                            <img
-                              src="/images/arrow-down.svg"
-                              id="arrow-down-tenure"
-                              class="img-fluid"
-                              style="margin-left: auto"
-                            />
-                          </div>
-                          <div
-                            class="bg-white position-absolute"
-                            id="dropdown-select-tenure"
-                          >
-                            <div id="dropdown-select-tenure-item"></div>
-                          </div>
-                        </div>
-                        <div></div>
-                      </div>
-
-                      <div class="row gx-0 mt-5 font-11 text-gray">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                          <div>One-time Processing Fee (₹)</div>
-                          <div class="font-28 form1-static">₹ 499</div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                          <div>Rate of Interest (% p.a.)</div>
-                          <div class="font-28 form1-static" id="rateOfInterest">
-                            0
-                          </div>
-                        </div>
-                      </div>
-
-                      <button
-                        type="submit"
-                        id="next-btn"
-                        class="sbi-button primary d-lg-block d-md-block d-none mt-20 mb-40"
-                        disabled
-                      >
-                        Next
-                      </button>
-                    </div>
-
-                    <div
-                      class="col-lg-6 col-md-6 justify-content-center flex flex-col align-items-center accordion-column2"
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      id="accordion-btn1"
+                      class="accordion-button collapsed font-14 fw-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="true"
+                      onclick="myFn()"
                     >
-                      <div class="text-center font-28 emi">EMI</div>
-                      <img src="/images/emi.svg" class="img-fluid my-20" />
-                      <div class="mb-2 font-28 rate" id="calculated-emi">
-                        ₹ 0.00 /month*
+                      1. Choose your plan
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <form name="form1" onsubmit="handleSubmit1();return false">
+                      <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                        <div class="col-md-6 col-lg-6">
+                          <div class="text-gray mt-2 font-14">
+                            Use the sliders or input fields to change Amount and
+                            Tenure
+                          </div>
+
+                          <div class="mt-30">
+                            <div class="flex align-items-center mb-20">
+                              <img
+                                src="/images/money.svg"
+                                class="img-fluid money-icon"
+                              />
+                              <div class="mx-2 font-14">Select your Amount</div>
+                            </div>
+                            <input
+                              type="range"
+                              class="form-range"
+                              min="10"
+                              max="50"
+                              value="10"
+                              onchange="myRangeSlider()"
+                              id="amountSlider"
+                            />
+                            <div
+                              class="flex range-slider font-10 mt-1 text-gray"
+                            >
+                              <div class="w-25">10k</div>
+                              <div class="w-25">20k</div>
+                              <div class="w-25">30k</div>
+                              <div class="w-25">40k</div>
+                              <div>50k</div>
+                            </div>
+                          </div>
+                          <label
+                            for="amount-slider-input"
+                            class="sbi-input-label mt-30 sbi-input-text mx-md-0 mx-lg-0 mx-auto"
+                            id="range-slider-input"
+                          >
+                            <input
+                              type="text"
+                              name="slider-amount"
+                              id="slider-amount"
+                              class="bg-transparent font-28 mt-2"
+                              value=""
+                              oninput="InputAmountSlider(),
+                              this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
+                              onKeyPress="if(this.value.length==10) return false;"
+                              autocomplete="off"
+                            />
+                            <span class="placeholder">Amount (₹)</span>
+                            <span
+                              id="formError1"
+                              class="text-danger font-10"
+                            ></span>
+                          </label>
+
+                          <div class="mt-30">
+                            <div class="flex align-items-center mb-20">
+                              <img
+                                src="/images/time.svg"
+                                class="img-fluid money-icon"
+                              />
+                              <div class="mx-2 font-14">Select your Tenure</div>
+                            </div>
+                            <input
+                              type="range"
+                              class="form-range"
+                              min="0"
+                              max="24"
+                              onchange="myTenureSlider()"
+                              value="0"
+                              id="tenureSlider"
+                            />
+                            <div
+                              class="flex range-slider font-10 mt-1 text-gray"
+                            >
+                              <div class="w-25">0</div>
+                              <div class="w-25">6</div>
+                              <div class="w-25">12</div>
+                              <div class="w-25">18</div>
+                              <div>24</div>
+                            </div>
+                            <div class="placeholder font-11 text-gray mt-20">
+                              Tenure (In months)
+                            </div>
+                            <div
+                              class="relative mt-2"
+                              id="custom-select-tenure"
+                            >
+                              <div class="flex customBtn" id="tenureDropdown">
+                                <div
+                                  class="font-28 px-2"
+                                  id="tenure-slider-input"
+                                >
+                                  0
+                                </div>
+                                <img
+                                  src="/images/arrow-down.svg"
+                                  id="arrow-down-tenure"
+                                  class="img-fluid"
+                                  style="margin-left: auto"
+                                />
+                              </div>
+                              <div
+                                class="bg-white position-absolute"
+                                id="dropdown-select-tenure"
+                              >
+                                <div id="dropdown-select-tenure-item"></div>
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+
+                          <div class="row gx-0 mt-5 font-11 text-gray">
+                            <div class="col-md-6 col-lg-6 col-sm-6">
+                              <div>One-time Processing Fee (₹)</div>
+                              <div class="font-28 form1-static">₹ 499</div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6">
+                              <div>Rate of Interest (% p.a.)</div>
+                              <div
+                                class="font-28 form1-static"
+                                id="rateOfInterest"
+                              >
+                                0
+                              </div>
+                            </div>
+                          </div>
+
+                          <button
+                            type="submit"
+                            id="next-btn"
+                            class="sbi-button primary d-lg-block d-md-block d-none mt-20 mb-40"
+                            disabled
+                          >
+                            Next
+                          </button>
+                        </div>
+
+                        <div
+                          class="col-lg-6 col-md-6 justify-content-center flex flex-col align-items-center accordion-column2"
+                        >
+                          <div class="text-center font-28 emi">EMI</div>
+                          <img src="/images/emi.svg" class="img-fluid my-20" />
+                          <div class="mb-2 font-28 rate" id="calculated-emi">
+                            ₹ 0.00 /month*
+                          </div>
+                          <div class="text-grayLight font-14">
+                            *exclusive of applicable taxes
+                          </div>
+                        </div>
+                        <div style="padding-inline: 12px">
+                          <button
+                            type="submit"
+                            id="next-sm-btn"
+                            class="sbi-button primary w-100 d-lg-none d-md-none d-block mt-20 mb-40"
+                            disabled
+                          >
+                            Next
+                          </button>
+                        </div>
                       </div>
-                      <div class="text-grayLight font-14">
-                        *exclusive of applicable taxes
-                      </div>
-                    </div>
-                    <div style="padding-inline: 12px">
-                      <button
-                        type="submit"
-                        id="next-sm-btn"
-                        class="sbi-button primary w-100 d-lg-none d-md-none d-block mt-20 mb-40"
-                        disabled
+                    </form>
+                  </div>
+                </div>
+
+                <div class="accordion-item position-relative">
+                  <div class="stepper-bullets"></div>
+                  <div
+                    id="step-2-completed"
+                    class="rounded-circle position-absolute flex align-items-center justify-content-center"
+                  >
+                    <img src="/images/tick.png" class="img-fluid" />
+                  </div>
+
+                  <div
+                    class="bg-white text-white h-100 position-absolute last-stepper"
+                  >
+                    .
+                  </div>
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      id="accordion-btn2"
+                      class="accordion-button collapsed font-14 fw-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      onclick="myFn()"
+                    >
+                      2. Enter Your Payment Details (NEFT)
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                      <form
+                        name="form2"
+                        id="form2"
+                        onsubmit="handleSubmit2();return false"
                       >
-                        Next
-                      </button>
+                        <div class="col-lg-6 col-md-6">
+                          <label
+                            for="name"
+                            class="sbi-input-label sbi-input-text w-100"
+                            id="text-input"
+                          >
+                            <input
+                              type="text"
+                              id="name"
+                              name="name"
+                              oninput="validateFormForName()"
+                              autocomplete="off"
+                              maxlength="255"
+                            />
+                            <span class="placeholder" style="z-index: 2"
+                              >Name</span
+                            >
+                            <span
+                              id="formError3"
+                              class="text-danger font-10"
+                            ></span>
+                            <div id="error-message1"></div>
+                          </label>
+
+                          <div class="relative mt-30" id="custom-select-menu">
+                            <div
+                              class="flex customBtn position-relative"
+                              id="dropDown"
+                            >
+                              <div
+                                name="accountNumber"
+                                class="font-14"
+                                id="accountNumber"
+                              ></div>
+                              <img
+                                src="/images/arrow-down.svg"
+                                id="arrow-down"
+                                class="img-fluid"
+                                style="margin-left: auto"
+                              />
+                              <span class="placeholder" id="custumSelect"
+                                >Bank A/C No.</span
+                              >
+                            </div>
+                            <div
+                              class="bg-white position-absolute"
+                              id="dropdown-select-menu"
+                            >
+                              <div id="dropdown-select-menu-item"></div>
+                              <div
+                                class="primary font-14 p-2"
+                                style="color: #00b1f2"
+                              >
+                                +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank
+                                account
+                              </div>
+                            </div>
+                          </div>
+                          <label
+                            for="confirmAccount"
+                            class="sbi-input-label position-relative mt-30 sbi-input-text w-100"
+                            id="input1"
+                          >
+                            <input
+                              type="number"
+                              name="confirmAccount"
+                              id="confirmAccount"
+                              oninput="validateFormForAccount(),this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
+                              autocomplete="off"
+                            />
+                            <span class="placeholder"
+                              >Confirm Bank A/c No.</span
+                            >
+                            <span
+                              id="formError2"
+                              class="font-10"
+                              style="color: red"
+                            ></span>
+                            <div id="error-message2"></div>
+                            <div id="error"></div>
+                          </label>
+                          <div class="position-relative mb-30 mt-20">
+                            <label
+                              for="ifsc"
+                              class="sbi-input-label sbi-input-text w-100"
+                              id="input2"
+                            >
+                              <input
+                                type="text"
+                                name="ifsc"
+                                id="ifsc"
+                                oninput="if(this.value.match(/\s/g)){
+                                  this.value=this.value.replace(/\s/g,'');
+                                }"
+                                autocomplete="off"
+                              />
+                              <span class="placeholder">IFSC Code</span>
+                            </label>
+                            <div
+                              class="font-14 position-absolute find-your-ifsc top-0 mt-1"
+                            >
+                              Find your IFSC Code
+                            </div>
+                          </div>
+
+                          <label
+                            for="bank-details"
+                            class="sbi-input-label sbi-input-text w-100"
+                            id="input3"
+                          >
+                            <input
+                              type="text"
+                              name="bank-details"
+                              id="bank-details"
+                              autocomplete="off"
+                            />
+                            <span class="placeholder">Bank Details</span>
+                          </label>
+
+                          <label
+                            for="sbi-sample"
+                            class="sbi-input-label mt-30 md-checkbox sbi-input-checkbox"
+                            id="sbi-terms-checkbox"
+                          >
+                            <input
+                              type="checkbox"
+                              id="checkbox"
+                              name="checkbox"
+                              value=""
+                              oninput="enableConfirmBtn()"
+                              id="sbi-sample"
+                            />
+                            <label class="p-0" style="margin-top: 2px"
+                              >I agree to the
+                              <a href="#" class="underlined text-dark"
+                                >Terms and Conditions</a
+                              ></label
+                            >
+                          </label>
+                          <button
+                            type="submit"
+                            id="confirm-btn"
+                            style="min-width: max-content"
+                            class="sbi-button col-lg-2 col-md-2 primary d-lg-none d-md-none d-block mt-40 mb-0"
+                            disabled
+                          >
+                            Confirm
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <div class="accordion-item position-relative">
-              <div class="stepper-bullets"></div>
-              <div
-                id="step-2-completed"
-                class="rounded-circle position-absolute flex align-items-center justify-content-center"
-              >
-                <img src="/images/tick.png" class="img-fluid" />
-              </div>
-
-              <div
-                class="bg-white text-white h-100 position-absolute last-stepper"
-              >
-                .
-              </div>
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  id="accordion-btn2"
-                  class="accordion-button collapsed font-14 fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  onclick="myFn()"
-                >
-                  2. Enter Your Payment Details (NEFT)
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body p-lg-0 p-md-0 row gx-0">
-                  <form
-                    name="form2"
-                    id="form2"
-                    onsubmit="handleSubmit2();return false"
-                  >
-                    <div class="col-lg-6 col-md-6">
-                      <label
-                        for="name"
-                        class="sbi-input-label sbi-input-text w-100"
-                        id="text-input"
-                      >
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          oninput="validateFormForName()"
-                          autocomplete="off"
-                          maxlength="255"
-                        />
-                        <span class="placeholder" style="z-index: 2">Name</span>
-                        <span
-                          id="formError3"
-                          class="text-danger font-10"
-                        ></span>
-                        <div id="error-message1"></div>
-                      </label>
-
-                      <div class="relative mt-30" id="custom-select-menu">
-                        <div
-                          class="flex customBtn position-relative"
-                          id="dropDown"
-                        >
-                          <div
-                            name="accountNumber"
-                            class="font-14"
-                            id="accountNumber"
-                          ></div>
-                          <img
-                            src="/images/arrow-down.svg"
-                            id="arrow-down"
-                            class="img-fluid"
-                            style="margin-left: auto"
-                          />
-                          <span class="placeholder" id="custumSelect"
-                            >Bank A/C No.</span
-                          >
-                        </div>
-                        <div
-                          class="bg-white position-absolute"
-                          id="dropdown-select-menu"
-                        >
-                          <div id="dropdown-select-menu-item"></div>
-                          <div
-                            class="primary font-14 p-2"
-                            style="color: #00b1f2"
-                          >
-                            +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank account
-                          </div>
-                        </div>
-                      </div>
-                      <label
-                        for="confirmAccount"
-                        class="sbi-input-label position-relative mt-30 sbi-input-text w-100"
-                        id="input1"
-                      >
-                        <input
-                          type="number"
-                          name="confirmAccount"
-                          id="confirmAccount"
-                          oninput="validateFormForAccount(),this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
-                          autocomplete="off"
-                        />
-                        <span class="placeholder">Confirm Bank A/c No.</span>
-                        <span
-                          id="formError2"
-                          class="font-10"
-                          style="color: red"
-                        ></span>
-                        <div id="error-message2"></div>
-                        <div id="error"></div>
-                      </label>
-                      <div class="position-relative mb-30 mt-20">
-                        <label
-                          for="ifsc"
-                          class="sbi-input-label sbi-input-text w-100"
-                          id="input2"
-                        >
-                          <input
-                            type="text"
-                            name="ifsc"
-                            id="ifsc"
-                            oninput="if(this.value.match(/\s/g)){
-                              this.value=this.value.replace(/\s/g,'');
-                            }"
-                            autocomplete="off"
-                          />
-                          <span class="placeholder">IFSC Code</span>
-                        </label>
-                        <div
-                          class="font-14 position-absolute find-your-ifsc top-0 mt-1"
-                        >
-                          Find your IFSC Code
-                        </div>
-                      </div>
-
-                      <label
-                        for="bank-details"
-                        class="sbi-input-label sbi-input-text w-100"
-                        id="input3"
-                      >
-                        <input
-                          type="text"
-                          name="bank-details"
-                          id="bank-details"
-                          autocomplete="off"
-                        />
-                        <span class="placeholder">Bank Details</span>
-                      </label>
-
-                      <label
-                        for="sbi-sample"
-                        class="sbi-input-label mt-30 md-checkbox sbi-input-checkbox"
-                        id="sbi-terms-checkbox"
-                      >
-                        <input
-                          type="checkbox"
-                          id="checkbox"
-                          name="checkbox"
-                          value=""
-                          oninput="enableConfirmBtn()"
-                          id="sbi-sample"
-                        />
-                        <label class="p-0" style="margin-top: 2px"
-                          >I agree to the
-                          <a href="#" class="underlined text-dark"
-                            >Terms and Conditions</a
-                          ></label
-                        >
-                      </label>
-                      <button
-                        type="submit"
-                        id="confirm-btn"
-                        style="min-width: max-content"
-                        class="sbi-button col-lg-2 col-md-2 primary d-lg-none d-md-none d-block mt-40 mb-0"
-                        disabled
-                      >
-                        Confirm
-                      </button>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -500,6 +528,20 @@
   </body>
 
   <script>
+    $(function () {
+      $("#draggable").draggable({
+        containment: "#containment-wrapper",
+        scroll: false,
+        axis: "y",
+      });
+    });
+
+    window.addEventListener("load", () => {
+      if (window.innerWidth > 575) {
+        console.log(window.innerWidth);
+        document.getElementById("draggable").classList.remove("draggable");
+      }
+    });
     const accountDropdown = document.getElementById("dropDown");
     const accountDropdownMenu = document.getElementById("dropdown-select-menu");
     accountDropdown.addEventListener("click", (e) => {
