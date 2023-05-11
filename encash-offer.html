@@ -150,13 +150,13 @@
                         id="range-slider-input"
                       >
                         <input
-                          type="number"
+                          type="text"
                           name="slider-amount"
                           id="slider-amount"
                           class="bg-transparent font-28 mt-2"
                           value=""
-                          pattern="/^-?\d+\.?\d*$/"
-                          oninput="InputAmountSlider()"
+                          oninput="InputAmountSlider(),
+                          this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
                           onKeyPress="if(this.value.length==10) return false;"
                           autocomplete="off"
                         />
@@ -195,16 +195,13 @@
                           Tenure (In months)
                         </div>
                         <div class="relative mt-2" id="custom-select-tenure">
-                          <div
-                            class="flex customBtn"
-                            onclick="showTenureDropdown()"
-                          >
+                          <div class="flex customBtn" id="tenureDropdown">
                             <div class="font-28 px-2" id="tenure-slider-input">
                               0
                             </div>
                             <img
                               src="/images/arrow-down.svg"
-                              id="arrow-down"
+                              id="arrow-down-tenure"
                               class="img-fluid"
                               style="margin-left: auto"
                             />
@@ -226,10 +223,9 @@
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                           <div>Rate of Interest (% p.a.)</div>
-                          <div
-                            class="font-28 form1-static"
-                            id="rateOfInterest"
-                          ></div>
+                          <div class="font-28 form1-static" id="rateOfInterest">
+                            0
+                          </div>
                         </div>
                       </div>
 
@@ -317,7 +313,7 @@
                           type="text"
                           id="name"
                           name="name"
-                          onchange="validateFormForName()"
+                          oninput="validateFormForName()"
                           autocomplete="off"
                           maxlength="255"
                         />
@@ -329,15 +325,10 @@
                         <div id="error-message1"></div>
                       </label>
 
-                      <div class="placeholder font-11 text-gray mb-10 mt-20">
-                        Bank A/C No.
-                      </div>
-
-                      <div class="relative" id="custom-select-menu">
+                      <div class="relative mt-30" id="custom-select-menu">
                         <div
-                          class="flex customBtn"
+                          class="flex customBtn position-relative"
                           id="dropDown"
-                          onclick="showDropdown()"
                         >
                           <div
                             name="accountNumber"
@@ -350,6 +341,9 @@
                             class="img-fluid"
                             style="margin-left: auto"
                           />
+                          <span class="placeholder" id="custumSelect"
+                            >Bank A/C No.</span
+                          >
                         </div>
                         <div
                           class="bg-white position-absolute"
@@ -373,7 +367,7 @@
                           type="number"
                           name="confirmAccount"
                           id="confirmAccount"
-                          oninput="validateFormForAccount()"
+                          oninput="validateFormForAccount(),this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
                           autocomplete="off"
                         />
                         <span class="placeholder">Confirm Bank A/c No.</span>
@@ -504,29 +498,51 @@
       </div>
     </div>
   </body>
+
   <script>
-    function showDropdown() {
-      var a = document.getElementById("arrow-down");
-      var b = document.getElementById("dropdown-select-menu");
-      if (b.style.display === "none") {
-        b.style.display = "block";
-        a.style.rotate = "180deg";
-      } else {
-        b.style.display = "none";
-        a.style.rotate = "";
+    const accountDropdown = document.getElementById("dropDown");
+    const accountDropdownMenu = document.getElementById("dropdown-select-menu");
+    accountDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      accountDropdownMenu.classList.toggle("hidden");
+      document.getElementById("arrow-down").classList.toggle("rotateIcon");
+    });
+
+    document.addEventListener("click", (e) => {
+      const arrow = document.getElementById("arrow-down").getAttribute("class");
+      if (e.target.closest("#dropdown-select-menu")) return;
+      accountDropdownMenu.classList.add("hidden");
+      if (arrow.includes("rotateIcon")) {
+        document.getElementById("arrow-down").classList.toggle("rotateIcon");
       }
-    }
-    function showTenureDropdown() {
-      var a = document.getElementById("arrow-down");
-      var b = document.getElementById("dropdown-select-tenure");
-      if (b.style.display === "none") {
-        b.style.display = "block";
-        a.style.rotate = "180deg";
-      } else {
-        b.style.display = "none";
-        a.style.rotate = "";
+    });
+
+    const tenureDropdown = document.getElementById("tenureDropdown");
+    const tenureDropdownMenu = document.getElementById(
+      "dropdown-select-tenure"
+    );
+    tenureDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      tenureDropdownMenu.classList.toggle("hidden1");
+      document
+        .getElementById("arrow-down-tenure")
+        .classList.toggle("rotateIcon");
+      console.log("asdasd");
+    });
+
+    document.addEventListener("click", (e) => {
+      const arrow = document
+        .getElementById("arrow-down-tenure")
+        .getAttribute("class");
+      if (e.target.closest("#dropdown-select-menu")) return;
+      tenureDropdownMenu.classList.add("hidden1");
+      if (arrow.includes("rotateIcon")) {
+        document
+          .getElementById("arrow-down-tenure")
+          .classList.toggle("rotateIcon");
       }
-    }
+    });
+
     const AccountDetails = [
       {
         name: "hdfc",
@@ -576,23 +592,20 @@
       const tenureValue = document.getElementById("tenure-slider-input");
       tenureValue.innerHTML = data.id;
       InputTenureSlider();
-      showTenureDropdown();
     };
     const getData = (e) => {
       const index = e.currentTarget.getAttribute("data-index");
       const data = AccountDetails[index];
-      // const nameField = document.forms["form2"]["name"];
       const Ifsc = document.forms["form2"]["ifsc"];
       const details = document.forms["form2"]["bank-details"];
       const accNo = document.getElementById("accountNumber");
-      // nameField.value = data.name;
       Ifsc.value = data.ifsc;
       details.value = data.details;
-      accNo.innerHTML = data.accountNo;
-      // nameField.focus();
+      accNo.innerText = data.accountNo;
       Ifsc.focus();
       details.focus();
-      showDropdown();
+      document.getElementById("dropDown").click();
+      document.getElementById("custumSelect").classList.add("valueExists");
     };
 
     (function () {
@@ -713,12 +726,6 @@
         confirmBtn.setAttribute("disabled", "");
         confirmBtnMobile.setAttribute("disabled", "");
         return (returnvalue = false);
-      } else if (!name.value.match(/^[^\s][a-zA-Z\s]+[^\s]$/)) {
-        setErrors("name", "enter a valid name");
-        name.style.borderColor = "red";
-        confirmBtn.setAttribute("disabled", "");
-        confirmBtnMobile.setAttribute("disabled", "");
-        return (returnvalue = false);
       } else {
         name.style.borderColor = "";
         document.getElementById(
@@ -734,7 +741,7 @@
       return returnvalue;
     }
     window.onpaint = myFn();
-    window.onload = document.getElementById("dropDown").click();
+    window.onload = document.getElementById("tenureDropdown").click();
     var Amount = document.getElementById("amountSlider");
     var Tenure = document.getElementById("tenureSlider");
     var tenureOutput = $("#tenure-slider-input");
@@ -757,8 +764,10 @@
       myTenureSlider();
     }
     function InputAmountSlider() {
-      Amount.value = amountOutput.value / 1000;
-      amountOutputFooter.innerHTML = `₹ ${amountOutput.value}`;
+      Amount.value = amountOutput.value.replace(/[^0-9.]/g, "") / 1000;
+      amountOutputFooter.innerHTML = `₹ ${amountOutput.value
+        .replace(/[^0-9.]/g, "")
+        .replace(/[(?!.*\.\.)]/g, "")}`;
       validateForm1();
       if (
         amountOutput.value < 10000 ||
@@ -771,13 +780,11 @@
         nextBtn.removeAttribute("disabled", "");
         nextBtnMobile.removeAttribute("disabled", "");
       }
-      myTenureSlider();
     }
     function myTenureSlider() {
       document.getElementById("rateOfInterest").innerHTML = "3.5% p.a.";
       document.getElementById("rateOfInterestFooter").innerHTML = "3.5% p.a.";
       tenureOutput.html(Tenure.value);
-      console.log(Tenure.value);
       const PR = amountOutput.value * 0.035;
       if (Tenure.value == 0) {
         EMI.innerHTML = `₹ 0.00 /month*`;

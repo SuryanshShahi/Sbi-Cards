@@ -269,8 +269,16 @@ input[type="range"] {
   box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
   z-index: 1;
   width: 95.5%;
+  /* display: none; */
+}
+.lower-section .hidden,
+.lower-section .hidden1 {
   display: none;
 }
+.lower-section .rotateIcon {
+  transform: rotate(180deg);
+}
+
 .lower-section #custom-select-tenure .customBtn {
   border-bottom: 1px solid #8a8a96;
   cursor: pointer;
@@ -280,7 +288,6 @@ input[type="range"] {
   box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
   z-index: 1;
   width: 95.5%;
-  display: none;
   overflow-y: scroll;
   height: 220px;
 }
@@ -376,4 +383,27 @@ input[type="range"] {
 
 #dropdown.is-open {
   display: block;
+}
+
+.is-open,
+.valueExists {
+  position: absolute;
+  top: -16px;
+  font-size: 10px;
+  color: #8a8a96;
+}
+
+.customBtn .placeholder {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.3s;
+  color: #8a8a96;
+}
+
+.customBtn .is-open,
+.customBtn .valueExists {
+  color: #00b1f2;
+  font-size: 11px;
 }
