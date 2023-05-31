@@ -1,0 +1,69 @@
+/* --------------------------------------------------------------------------------------- */
+/* -----------------------------------------Login----------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+.sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+.sbi-cash-requirements img {
+  max-height: 32px;
+  margin-right: 20px;
+  max-width: 28px;
+}
+.sbi-cash-requirements > div {
+  font-size: 18px;
+  color: #8a8a96;
+}
+.sbi-cash-requirements p,
+.sbi-cash-requirements {
+  max-width: 405px;
+}
+.sbi-login-nav {
+  border-bottom: 1px solid #dadada;
+  padding-right: 130px;
+}
+.sbi-logo {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+#login-page .column1 {
+  background-color: #f2f7fd;
+}
+#login-page .row {
+  height: calc(100vh - 60px);
+}
+@media (max-width: 990px) {
+  .sbi-login-nav {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .sbi-login-nav {
+    border: none;
+    padding-right: 0px;
+  }
+  #login-page #errorMssge {
+    max-width: 100% !important;
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 576px) {
+  .sbi-cash-requirements {
+    font-size: 20px;
+  }
+  .sbi-cash-requirements p {
+    font-size: 20px;
+  }
+  .sbi-cash-requirements > div {
+    font-size: 14px;
+  }
+  .sbi-login-nav {
+    padding-top: 8px !important;
+    padding-top: 8px !important;
+  }
+}

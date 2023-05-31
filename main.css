@@ -483,7 +483,7 @@ a {
  */
 body {
   color: #2d2d2d;
-  font-family:  "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 p {
@@ -517,30 +517,30 @@ a:hover,
   color: #2d2d2d;
   margin-top: 0;
 }
-.sbi-heading.bold{
+.sbi-heading.bold {
   font-weight: 700;
 }
-h1.sbi-heading{
+h1.sbi-heading {
   font-size: 24px;
 }
 
-h2.sbi-heading{
+h2.sbi-heading {
   font-size: 20px;
 }
 
-h3.sbi-heading{
+h3.sbi-heading {
   font-size: 18px;
 }
 
-h4.sbi-heading{
+h4.sbi-heading {
   font-size: 16px;
 }
 
-h5.sbi-heading{
+h5.sbi-heading {
   font-size: 14px;
 }
 
-h6.sbi-heading{
+h6.sbi-heading {
   font-size: 10px;
 }
 .sbi-heading.sbi-heading-md {
@@ -549,7 +549,7 @@ h6.sbi-heading{
 .sbi-heading.sbi-heading-sm {
   font-size: 16px;
 }
-.sbi-heading.gray{
+.sbi-heading.gray {
   color: #8a8a96;
 }
 .sbi-subheading {
@@ -566,7 +566,7 @@ h6.sbi-heading{
 .sbi-subtext.black {
   color: #2d2d2d;
 }
-.sbi-tiny-text{
+.sbi-tiny-text {
   font: 400 8px "Open Sans", sans-serif;
 }
 .sbi-small-text {
@@ -768,14 +768,14 @@ b.boldest {
 }
 
 @media (max-width: 767px) {
-  .container{
+  .container {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .sbi-small-text{
+  .sbi-small-text {
     font-size: 12px;
   }
-  .text-center-sm{
+  .text-center-sm {
     text-align: center;
   }
   .sm-hidden {
@@ -899,13 +899,13 @@ b.boldest {
   .reward-star img {
     margin: 0px;
   }
-  h4.sbi-heading{
+  h4.sbi-heading {
     font-size: 14px;
   }
-  h6.sbi-heading{
+  h6.sbi-heading {
     font-size: 12px;
   }
-  .sbi-tiny-text{
+  .sbi-tiny-text {
     font-size: 10px;
   }
 }
@@ -1100,20 +1100,19 @@ b.boldest {
     margin-left: 91.666667%;
   }
 }
-@media (min-width:768px) and (max-width: 991px){
-  .container{
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media (min-width:992px) and (max-width: 1300px){
-  .container{
+@media (min-width: 992px) and (max-width: 1300px) {
+  .container {
     padding-left: 60px;
     padding-right: 60px;
   }
 }
 @media (min-width: 768px) {
-  
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -1355,20 +1354,20 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   cursor: not-allowed;
 }
-.sbi-button.sbi-button-large{
+.sbi-button.sbi-button-large {
   height: 56px;
   min-width: 280px;
 }
 .sbi-button.noMargin {
   margin-bottom: 0px;
 }
-.sbi-button.has-icon{
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    line-height: 24px;
+.sbi-button.has-icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 24px;
 }
-.sbi-button.has-icon img{
+.sbi-button.has-icon img {
   width: 24px;
   margin-right: -24px;
 }
@@ -1419,7 +1418,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 10px;
 }
 /*  */
-.mb-60{
+.mb-60 {
   margin-bottom: 60px;
 }
 .mb-40 {
@@ -1437,10 +1436,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .mb-10 {
   margin-bottom: 10px;
 }
-.mb-5{
+.mb-5 {
   margin-bottom: 5px;
 }
-.mb-none{
+.mb-none {
   margin-bottom: 0;
 }
 /* Inputs */
@@ -1766,21 +1765,23 @@ input[type="number"]::-webkit-outer-spin-button {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
-  border-radius: 30px; }
+  transition: 0.4s;
+  border-radius: 30px;
+}
 .sbi-switch .slider:before {
-    position: absolute;
-    content: "";
-    height: 34px;
-    width: 34px;
-    left: 0px;
-    bottom: -2px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-    box-shadow: 0 0 5px 0 #d5d5ea; }
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px;
+  left: 0px;
+  bottom: -2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 #d5d5ea;
+}
 @media (max-width: 767px) {
-  .sbi-button.sbi-button-large{
+  .sbi-button.sbi-button-large {
     width: 100%;
     max-width: 376px;
   }
@@ -1908,13 +1909,13 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(0);
   max-width: 590px;
 }
-.modal .modal-header{
+.modal .modal-header {
   background: #f2f7fd;
   padding: 20px 60px;
   width: 100%;
   max-width: 590px;
 }
-.modal .modal-close svg{
+.modal .modal-close svg {
   width: 100%;
   height: 100%;
 }
@@ -2035,3 +2036,4 @@ input[type="number"]::-webkit-outer-spin-button {
 .sample h4 {
   font-weight: 600;
 }
+

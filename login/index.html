@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" />
+    <link href="../main.css" rel="stylesheet" />
+    <link href="../custom-styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bundle.js"></script>
+  </head>
+
+  <body>
+    <div id="login-page">
+      <div class="py-19 d-flex align-items-center sbi-login-nav">
+        <div class="text-center w-100">
+          <a href="https://www.sbicard.com/"
+            ><img
+              src="../images/sbi-logo.svg"
+              class="img-fluid text-center sbi-logo"
+          /></a>
+        </div>
+        <div class="fw-bold sbi-exit-btn d-md-block d-lg-block d-none">
+          Exit
+        </div>
+      </div>
+      <div class="row m-0 gx-0 position-relative justify-content-center">
+        <div
+          class="py-10 position-absolute font-14 mt-30 text-center"
+          id="errorMssge"
+          style="
+            background-color: #efeff1;
+            border: solid 1px #bebebe;
+            z-index: 2;
+            max-width: calc(100vw - 43vw);
+          "
+        >
+          You have successfully logged out.
+        </div>
+        <div
+          class="col-md-6 order-md-1 col-lg-6 flex-column order-lg-1 order-2 justify-content-center align-items-center d-flex px-3 py-5 column1"
+        >
+          <div class="sbi-cash-requirements">
+            <p class="fw-bold font-24">
+              Fulfill your instant cash requirements with SBI Card
+            </p>
+            <div class="d-flex align-items-center" style="margin-top: 40px">
+              <img src="../images/arrow.png" class="img-fluid" />
+              <div>Low rate of interest</div>
+            </div>
+            <div class="d-flex align-items-center my-20">
+              <img src="../images/documentation.png" class="img-fluid" />
+              <div>Zero documentation</div>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="../images/rupay.png" class="img-fluid" />
+              <div>Instant money credited to your account</div>
+            </div>
+          </div>
+          <img
+            src="../images/login-image.png"
+            style="max-height: 380px"
+            class="img-fluid mt-40"
+          />
+        </div>
+        <div
+          class="col-md-6 order-md-2 col-lg-6 order-lg-2 order-1 px-0 justify-content-center align-items-center d-flex px-lg-5 px-sm-5"
+        >
+          <img src="../images/Login.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
