@@ -1,0 +1,236 @@
+.sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+.sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+#offer-selection .sbi-navbar {
+  padding-inline: 130px;
+}
+
+#disclaimer .modal-body .disclaimer-title {
+  margin-bottom: 33px;
+}
+.upper-section .encash-logo {
+  width: 157px;
+  height: 120px;
+}
+#offer-selection .upper-section {
+  background-color: #f2f7fd;
+  box-shadow: 0 1px 10px 0 rgba(213, 213, 234, 0.81);
+}
+#offer-selection .row {
+  max-width: 1020px;
+}
+#offer-selection .row .left-label {
+  max-width: 160px;
+}
+
+.lower-section {
+  margin-top: 20px;
+  max-width: 1020px;
+  margin-bottom: 80px;
+}
+.lower-section .header-border {
+  border: solid 1px #f2f2fd;
+}
+.lower-section .stepper-line {
+  width: fit-content;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.lower-section #stepper-progress-line {
+  border-left: 2px solid #00b1f2;
+  width: fit-content;
+  margin-left: 7px;
+  height: 100%;
+}
+
+.lower-section #step-1-completed,
+.lower-section #step-2-completed {
+  height: 16px;
+  width: 16px;
+  background-color: #00b1f2;
+  z-index: 10;
+  top: 0px;
+  left: -19px;
+}
+.lower-section #step-1-completed > img,
+.lower-section #step-2-completed > img {
+  height: 12px;
+  width: 10px;
+}
+.lower-section .last-stepper {
+  left: -43px;
+  top: 20px;
+}
+
+.lower-section .hidden,
+.lower-section .hidden1 {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  #offer-selection .sbi-navbar {
+    padding-inline: 40px;
+  }
+  #offer-selection .sbi-footer {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lower-section .stepper-line {
+    padding-left: 12px;
+    padding-right: 20px;
+  }
+  .lower-section {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+  .lower-section #nach-section {
+    padding-top: 0;
+  }
+  .lower-section #nach-section > img {
+    margin-bottom: 20px;
+    height: 30px !important;
+    width: 113px !important;
+  }
+  .lower-section .encash-title {
+    font-size: 20px;
+  }
+  .lower-section .last-stepper {
+    left: -23px !important;
+  }
+  .lower-section #step-1-completed,
+  .lower-section #step-2-completed {
+    left: -29px !important;
+  }
+}
+@media (max-width: 575px) {
+  #offer-selection .upper-section {
+    box-shadow: none;
+    position: fixed;
+    z-index: -1;
+    top: 60px;
+  }
+  #offer-selection #radio-wrapper {
+    gap: 20px !important;
+  }
+  #offer-selection #radio-wrapper > :nth-child(2) {
+    margin-left: auto;
+  }
+  .lower-section .encash-title {
+    margin-bottom: 12px;
+  }
+  #offer-selection .lower-section .steps p {
+    padding: 0 !important;
+  }
+  #offer-selection .sbi-navbar {
+    padding-inline: 20px;
+    top: 0;
+    position: sticky;
+    z-index: 20;
+    box-shadow: 0px 0px 2px 0px silver;
+  }
+  #offer-selection .lower-section #next-btn {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .bottomSheetWrapper {
+    background-color: white;
+    margin-top: 168px;
+    transition: all 0.5s;
+  }
+  #disclaimer .modal-body {
+    padding-inline: 20px !important;
+  }
+  #disclaimer .sbi-button {
+    width: 100%;
+    margin-bottom: 20px !important;
+  }
+  #disclaimer #proceedBtnWrapper {
+    width: 100% !important;
+  }
+  #disclaimer .sbi-link {
+    margin-left: 0;
+  }
+  #disclaimer p {
+    color: #2d2d2d;
+    text-align: unset !important;
+  }
+  #disclaimer .modal-body .disclaimer-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  #offer-selection .sbi-button {
+    margin-bottom: 30px !important;
+  }
+}
+@media (min-width: 575px) {
+  #offer-selection .lower-section {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 442px) {
+  .bottomSheetWrapper {
+    margin-top: 182px;
+  }
+}
+
+@media (max-width: 419px) {
+  .lower-section .stepper-line {
+    width: fit-content;
+    margin-top: 16px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 337px) {
+  .lower-section .stepper-line {
+    width: fit-content;
+    margin-top: 16px;
+    margin-bottom: 65px;
+  }
+}
+
+#upper-section {
+  max-height: 221px;
+  transition: all 0.5s;
+}
+.animate-scale-to-zero {
+  max-height: 0px !important;
+  transition: all 0.5s;
+}
+
+#accountNumber {
+  -webkit-text-security: disc;
+  line-height: 1;
+  padding-top: 4px;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#offer-selection .column2 img {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+#offer-selection .sbi-radio-btn::before {
+  width: 12px;
+  height: 12px;
+  margin: 7.5px !important;
+  top: 0;
+  left: 0;
+}

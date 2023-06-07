@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <link href="../main.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="../custom-styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="../bundle.js"></script>
+</head>
+
+<body style="background-color: #f5f5f5">
+  <div id="registration-successful">
+    <div class="py-19 d-flex bg-white align-items-center sbi-navbar">
+      <a href="https://www.sbicard.com/"><img src="../images/sbi-logo.svg" class="img-fluid" /></a>
+      <div class="fw-bold sbi-exit-btn">Exit</div>
+    </div>
+    <div class="upper-section" id="upper-section">
+      <div class="row m-0 gx-0 py-20 mx-auto">
+        <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
+          <img src="../images/encash-offer.png" class="img-fluid mr-20 encash-logo" />
+          <div class="left-label font-18 font-600 d-lg-block d-md-block d-sm-block d-lg-block d-none">
+            Instant funds on your card
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
+          <div class="font-14 font-600" style="margin-bottom: 12px;">Offer Benefits:</div>
+          <div class="d-flex align-items-center">
+            <img src="../images/badge.svg" class="img-fluid" style="width:21.33px;height:22.3px" />
+            <p class="my-0 ml-10">
+              Encash offer will be over and above your credit limit
+            </p>
+          </div>
+          <div class="d-flex align-items-center my-10">
+            <img src="../images/arrow.png" class="img-fluid" style="width:21.33px;height:22.3px" />
+            <p class="my-0 ml-10">Low rate of interest</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../images/document.svg" class="img-fluid" style="width:21.33px;height:22.3px" />
+            <p class="my-0 ml-10">Zero Documentation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="position-relative bottomSheetWrapper" id="bottomSheetWrapper">
+      <div class="pb-20 d-sm-none d-lg-none d-md-none" onclick="bottomSheet()">
+        <div class="flex justify-content-center bg-white w-100 py-10" style="box-shadow: 0 0 5px 0 #d5d5ea">
+          <img src="../images/dots.svg" class="img-fluid" />
+        </div>
+      </div>
+      <div class="lower-section bg-white mx-auto pb-10" id="lower-section">
+        <div class="font-18 font-600 px-20 encash-title pt-20">Encash</div>
+
+        <div class="header-border my-20"></div>
+        <div class="px-20">
+          <div class="fw-bold font-22 mb-20" id="successful">
+            Registration Successful! <br />
+            Your e-Mandate Debit Enrollment Details are:
+          </div>
+          <div class="font-18 text-gray mb-40" id="reference" style="pointer-events: none;">
+            Reference No: 877334881129<br />
+            e-Mandate Registration Reference ID: XXXXXXXXXX
+          </div>
+          <p class="m-0 font-18 resume-encash">
+            You will be automatically redirected to resume Encash booking in
+            10 seconds...
+          <div class="font-18" id="click-here">
+            <a href="#" class="underlined" style="font-size: 18px;">Click here</a> to resume
+            now
+          </div>
+          </p>
+
+          <div class="mt-40" style="margin-bottom: 98px;max-width: 672px">
+            <div class="font-18 user-details">Your Details</div>
+
+            <div class="row font-18 user-details" id="table"></div>
+
+            <div class="font-18 mt-40 user-details">Corporate Information</div>
+
+            <div class="row font-18 user-details" id="table2"></div>
+            <div class="font-18 user-details mt-40" style="pointer-events: none;">
+              In case of any issue/query related to E-Mandate registration you
+              may write to: shared.rems_support@sbicard.com or call 9711362167
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const corporateDetails = [
+    {
+      id: 1,
+      name: "Corporate Name",
+      value: "SBI Credit Card",
+      image: "../images/briefcase.svg",
+    },
+    {
+      id: 2,
+      name: "Utility Number",
+      value: "Nach000000000000022163",
+      image: "../images/utility.svg",
+    },
+  ];
+  const Details = [
+    {
+      id: 1,
+      name: "Reference ID",
+      value: "34641713",
+      image: "../images/reference.svg",
+    },
+    {
+      id: 2,
+      name: "Name",
+      value: "Ajay Mishra",
+      image: "../images/name.svg",
+    },
+    {
+      id: 3,
+      name: "Bank",
+      value: "HDFC Bank",
+      image: "../images/bank.svg",
+    },
+    {
+      id: 4,
+      name: "Account Type",
+      value: "Savings",
+      image: "../images/acc-type.svg",
+    },
+    {
+      id: 5,
+      name: "Account Number",
+      value: "89000087655",
+      image: "../images/document.svg",
+    },
+    {
+      id: 6,
+      name: "Amount",
+      value: "Rs. 1000",
+      image: "../images/money.svg",
+    },
+    {
+      id: 7,
+      name: "Start Date",
+      value: "23/03/2023",
+      image: "../images/start-date.svg",
+    },
+    {
+      id: 8,
+      name: "End Date",
+      value: "Until Cancelled",
+      image: "../images/end-date.svg",
+    },
+    {
+      id: 9,
+      name: "Frequency",
+      value: "As and when presented",
+      image: "../images/time.svg",
+    },
+    {
+      id: 10,
+      name: "Purpose of Mandate",
+      value: "Bill Payment Credit Card",
+      image: "../images/purpose.svg",
+    },
+  ];
+
+  function bottomSheet() {
+    const drawer = document.getElementById("upper-section");
+    const lowerSection = document.getElementById("lower-section");
+    const bottomSheetWrapper = document.getElementById("bottomSheetWrapper");
+    drawer.classList.toggle("animate-scale-to-zero");
+    if (drawer.getAttribute("class").includes("animate-scale-to-zero")) {
+      drawer.style.position = "relative";
+      drawer.style.top = "0";
+      drawer.style.transition = "none";
+      bottomSheetWrapper.style.marginTop = "0";
+      lowerSection.style.minHeight = "calc(100vh - 80px)";
+    } else {
+      drawer.style.position = "fixed";
+      drawer.style.top = "60px";
+      bottomSheetWrapper.style.marginTop = "168px";
+      lowerSection.style.minHeight = "calc(100vh - 280px)";
+    }
+  }
+  (function () {
+    Details.forEach(
+      (e, index) =>
+      (document.getElementById("table").innerHTML += `
+                  <div class="col-6 w-50 mt-28 dynamicData text-gray align-items-center flex"><img src='${e.image}' style="height:21.22px;width:20.72px;margin-right:10px"/>${e.name}</div>
+                  <div class="col-6 w-50 mt-28 dynamicData" style="font-family: Helvetica">${e.value}</div>
+              `)
+    );
+    corporateDetails.forEach(
+      (e, index) =>
+      (document.getElementById("table2").innerHTML += `
+                  <div class="col-6 w-50 mt-28 dynamicData text-gray"><img src='${e.image}' style="height:21.22px;width:20.72px;margin-right:10px"/>${e.name}</div>
+                  <div class="col-6 w-50 mt-28 dynamicData" style="font-family: Helvetica">${e.value}</div>
+              `)
+    );
+  })();
+</script>
+
+</html>

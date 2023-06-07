@@ -1,0 +1,211 @@
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------Not Eligible------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+#not-eligible .sbi-navbar {
+  padding-inline: 130px;
+}
+#not-eligible .sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+#not-eligible .sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+#not-eligible .sbi-not-eligible-upper-section .imageWrapper {
+  padding-left: 28px !important;
+}
+#not-eligible .sbi-benefit-items {
+  max-width: 180px;
+  display: block;
+}
+#not-eligible .last-icon {
+  height: 34px;
+  width: 41.8px;
+  margin-bottom: 13px !important;
+  padding-top: 2px;
+}
+
+#not-eligible .sbi-not-eligible-upper-section label {
+  max-width: 380px;
+  margin-top: 20px;
+  width: 100%;
+}
+#not-eligible .sbi-not-eligible-upper-section {
+  padding: 40px 80px;
+  background-color: #f2f7fd;
+}
+#not-eligible .sbi-not-eligible-upper-section p {
+  font-weight: 600;
+  max-width: 480px;
+}
+#not-eligible .sbi-not-eligible {
+  max-width: 1020px;
+  min-height: calc(100vh - 85px);
+}
+#not-eligible .sbi-benefit-items img {
+  margin-bottom: 10px;
+}
+@media (max-width: 990px) {
+  #not-eligible .sbi-navbar {
+    padding-inline: 40px !important;
+  }
+  #not-eligible .sbi-not-eligible-upper-section {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  #not-eligible .sbi-benefit-items {
+    max-width: 100% !important;
+    display: flex;
+    align-items: center;
+  }
+  #not-eligible .sbi-not-eligible-upper-section .imageWrapper {
+    padding-left: 0 !important;
+  }
+  #not-eligible .sbi-not-eligible-upper-section .imageWrapper > img {
+    height: 131px !important;
+  }
+  #not-eligible #middle-icon {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  #not-eligible .sbi-benefit-items > div {
+    padding-left: 15px;
+  }
+  #not-eligible .sbi-not-eligible-upper-section {
+    padding: 20px;
+    background-color: #f2f7fd;
+  }
+  #not-eligible .sbi-benefit-items img {
+    max-width: 26px;
+    height: 26px !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+  #not-eligible .lowerSectionWrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #not-eligible .imageWrapper > img {
+    margin-bottom: 40px;
+    max-width: 240px;
+  }
+  #not-eligible .sbi-not-eligible {
+    max-width: 1020px;
+    min-height: calc(100vh - 54px);
+  }
+}
+@media (max-width: 576px) {
+  #not-eligible .sbi-submit-btn {
+    margin-right: 0;
+    width: 100% !important;
+    max-width: 380px;
+    display: none;
+  }
+  #not-eligible .sbi-navbar {
+    padding-inline: 20px !important;
+  }
+  #not-eligible #eligibility {
+    width: 100% !important;
+  }
+  #not-eligible #thank-you {
+    font-weight: 600;
+    font-size: 20px !important;
+    margin-top: 60px !important;
+    margin-bottom: 18px !important;
+  }
+  #not-eligible .modal-body {
+    padding-inline: 20px !important;
+  }
+  #not-eligible #modal-btn {
+    width: 100% !important;
+    display: block;
+    margin-top: 40px !important;
+  }
+  #not-eligible .sbi-button {
+    width: 100% !important;
+    display: block;
+    font-size: 16px;
+    margin-inline: auto;
+  }
+  #not-eligible .subheading-1 {
+    margin-top: 28px;
+  }
+}
+
+#not-eligible .modal-body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#custom-select-menu .customBtn {
+  border-bottom: 1px solid #8a8a96;
+  cursor: pointer;
+  padding: 0;
+}
+#dropdown-select-menu-item .item:hover {
+  background-color: #f2f7fd;
+  font-weight: 600;
+  cursor: pointer;
+}
+#not-eligible #dropdown-select-menu {
+  box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+  z-index: 1;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: scroll;
+}
+#not-eligible .rotateIcon {
+  transform: rotate(180deg);
+}
+
+.customBtn .placeholder {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.3s;
+  color: #8a8a96;
+}
+.valueExists {
+  position: absolute;
+  top: -16px;
+  font-size: 10px;
+  color: #8a8a96;
+}
+
+#not-eligible #custom-select-menu {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 575px) {
+  #eligibility-modal .modal-body {
+    display: flex;
+    padding-inline: 20px !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #eligibility-modal .modal-body .sbi-button {
+    max-width: 100% !important;
+    width: 100%;
+  }
+  #eligibility-modal .modal-body {
+    display: flex;
+    padding-inline: 20px !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #eligibility-modal .modal-body .currentlyUnable {
+    font-size: 20px;
+  }
+}

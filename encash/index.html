@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="../main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="../custom-styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bundle.js"></script>
+  </head>
+
+  <body style="background-color: #f5f5f5" onclick="bankDetailsInactive()">
+    <div id="encash-form1">
+      <div class="py-19 d-flex bg-white align-items-center sbi-navbar">
+        <a href="https://www.sbicard.com/"
+          ><img src="../images/sbi-logo.svg" class="img-fluid"
+        /></a>
+        <div class="fw-bold sbi-exit-btn">Exit</div>
+      </div>
+      <div class="upper-section" id="upper-section">
+        <div class="row m-0 gx-0 py-20 mx-auto">
+          <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
+            <img
+              src="../images/encash-offer.png"
+              class="img-fluid mr-20 encash-logo"
+            />
+            <div
+              class="left-label font-18 font-600 d-lg-block d-md-block d-sm-block d-lg-block d-none"
+            >
+              Instant funds on your card
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
+            <div class="font-14 font-600" style="margin-bottom: 12px">
+              Offer Benefits:
+            </div>
+            <div class="d-flex align-items-center">
+              <img
+                src="../images/badge.svg"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">
+                Encash offer will be over and above your credit limit
+              </p>
+            </div>
+            <div class="d-flex align-items-center my-10">
+              <img
+                src="../images/arrow.png"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">Low rate of interest</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img
+                src="../images/document.svg"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">Zero Documentation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative bottomSheetWrapper" id="bottomSheetWrapper">
+        <div
+          class="pb-20 d-sm-none d-lg-none d-md-none"
+          onclick="bottomSheet()"
+        >
+          <div
+            class="flex justify-content-center bg-white w-100 py-10"
+            style="box-shadow: 0 0 5px 0 #d5d5ea"
+          >
+            <img src="../images/dots.svg" class="img-fluid" />
+          </div>
+        </div>
+        <div class="lower-section bg-white mx-auto pb-20" id="lower-section">
+          <div class="font-18 font-600 mb-10 px-20 encash-title">Encash</div>
+          <p class="m-0 font-14 text-gray px-20">
+            You have a pre-approved Encash offer over & above your card’s limit
+            at nominal interest rate. Valid till Mar, 15 2022
+          </p>
+          <div class="header-border mt-20"></div>
+
+          <div class="flex">
+            <div class="pr-40 pl-20 position-relative stepper-line">
+              <div id="stepper-progress-line"></div>
+            </div>
+
+            <div
+              class="accordion accordion-flush w-100 mb-2 mr-30"
+              id="accordionFlushExample"
+              style="margin-top: 22px"
+            >
+              <div class="accordion-item position-relative">
+                <div id="bullet1" class="stepper-bullet1"></div>
+                <div
+                  id="step-1-completed"
+                  class="rounded-circle position-absolute flex align-items-center justify-content-center"
+                >
+                  <img src="../images/tick.png" class="img-fluid" />
+                </div>
+
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    id="accordion-btn1"
+                    class="accordion-button collapsed font-14 fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="true"
+                    onclick="myFn()"
+                  >
+                    1. Choose your plan
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <form name="form1" onsubmit="handleSubmit1();return false">
+                    <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                      <div class="col-md-6 col-lg-6">
+                        <div class="text-gray mt-2 font-14">
+                          Use the sliders or input fields to change Amount and
+                          Tenure
+                        </div>
+
+                        <div class="mt-30">
+                          <div class="flex align-items-center mb-20">
+                            <img
+                              src="../images/money.svg"
+                              class="img-fluid money-icon"
+                            />
+                            <div class="mx-2 font-14">Select your Amount</div>
+                          </div>
+                          <input
+                            type="range"
+                            class="form-range"
+                            min="10"
+                            max="50"
+                            value="10"
+                            oninput="myRangeSlider()"
+                            id="amountSlider"
+                            style="
+                              border-radius: 4.5px !important;
+                              font-weight: 300;
+                            "
+                          />
+                          <div class="flex range-slider font-10 mt-1 text-gray">
+                            <div class="w-25">10k</div>
+                            <div class="w-25">20k</div>
+                            <div class="w-25">30k</div>
+                            <div class="w-25">40k</div>
+                            <div>50k</div>
+                          </div>
+                        </div>
+                        <label
+                          for="amount-slider-input"
+                          class="sbi-input-label sbi-input-text mx-md-0 mx-lg-0 mx-auto"
+                          id="range-slider-input"
+                          style="margin-top: 46px"
+                        >
+                          <input
+                            type="number"
+                            name="slider-amount"
+                            id="slider-amount"
+                            class="bg-transparent font-28"
+                            value=""
+                            oninput="InputAmountSlider(),
+                              this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
+                            onKeyPress="if(this.value.length==10) return false;"
+                            autocomplete="off"
+                            style="font-weight: 300"
+                          />
+                          <span class="placeholder">Amount (₹)</span>
+                          <span
+                            id="formError1"
+                            class="text-danger font-10"
+                          ></span>
+                          <div id="error-message3"></div>
+                        </label>
+
+                        <div class="mt-30">
+                          <div class="flex align-items-center mb-20">
+                            <img
+                              src="../images/time.svg"
+                              class="img-fluid money-icon"
+                            />
+                            <div class="mx-2 font-14">Select your Tenure</div>
+                          </div>
+                          <input
+                            type="range"
+                            class="form-range"
+                            min="0"
+                            max="24"
+                            step="6"
+                            oninput="myTenureSlider()"
+                            value="0"
+                            id="tenureSlider"
+                            style="border-radius: 4.5px !important"
+                          />
+                          <div class="flex range-slider font-10 mt-1 text-gray">
+                            <div class="w-25">0</div>
+                            <div class="w-25" style="padding-left: 6px">6</div>
+                            <div class="w-25">12</div>
+                            <div class="w-25">18</div>
+                            <div>24</div>
+                          </div>
+                          <div class="placeholder font-11 text-gray mt-20">
+                            Tenure (In months)
+                          </div>
+                          <div class="relative mt-2" id="custom-select-tenure">
+                            <div class="flex customBtn" id="tenureDropdown">
+                              <div
+                                class="font-28 px-2"
+                                id="tenure-slider-input"
+                                style="font-weight: 300"
+                              >
+                                0
+                              </div>
+                              <img
+                                src="../images/arrow-down.svg"
+                                id="arrow-down-tenure"
+                                class="img-fluid"
+                                style="margin-left: auto"
+                              />
+                            </div>
+                            <div
+                              class="bg-white position-absolute hidden1"
+                              id="dropdown-select-tenure"
+                            >
+                              <div id="dropdown-select-tenure-item"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row gx-0 mt-30 font-11 text-gray">
+                          <div class="col-md-6 col-lg-6 col-sm-6">
+                            <div>One-time Processing Fee (₹)</div>
+                            <div
+                              class="font-28 form1-static"
+                              id="processingFee"
+                            >
+                              0
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-sm-6">
+                            <div>Rate of Interest (% p.a.)</div>
+                            <div
+                              class="font-28 form1-static"
+                              id="rateOfInterest"
+                            >
+                              0
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          type="submit"
+                          id="next-btn"
+                          class="sbi-button font-600 primary d-lg-block d-md-block d-none mt-20 mb-30"
+                          disabled
+                        >
+                          Next
+                        </button>
+                      </div>
+
+                      <div
+                        class="col-lg-6 col-md-6 justify-content-center text-center flex accordion-column2"
+                        style="font-weight: 300"
+                      >
+                        <div>
+                          <div class="font-28 emi">EMI</div>
+                          <img
+                            src="../images/emi.svg"
+                            class="img-fluid my-20 mx-auto"
+                            style="width: 203px; height: 93px"
+                          />
+                          <div class="mb-2 font-28 rate" id="calculated-emi">
+                            ₹ 0 /month*
+                          </div>
+                          <div
+                            class="text-grayLight font-14"
+                            style="font-weight: normal"
+                          >
+                            *exclusive of applicable taxes
+                          </div>
+                        </div>
+                      </div>
+                      <div style="padding-inline: 12px">
+                        <button
+                          type="submit"
+                          id="next-sm-btn"
+                          class="sbi-button font-600 primary w-100 d-lg-none d-md-none d-block mt-20 mb-40"
+                          disabled
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="accordion-item position-relative xy">
+                <div id="bullet2" class="stepper-bullet2"></div>
+                <div
+                  id="step-2-completed"
+                  class="rounded-circle position-absolute flex align-items-center justify-content-center"
+                >
+                  <img src="../images/tick.png" class="img-fluid" />
+                </div>
+
+                <div
+                  class="bg-white text-white h-100 position-absolute last-stepper"
+                >
+                  .
+                </div>
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    id="accordion-btn2"
+                    class="accordion-button collapsed font-14 fw-bold text-gray"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    onclick="myFn2()"
+                  >
+                    2. Enter Your Payment Details (NEFT)
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body p-lg-0 p-md-0 row gx-0">
+                    <form
+                      name="form2"
+                      id="form2"
+                      onsubmit="handleSubmit2();return false"
+                    >
+                      <div class="col-lg-6 col-md-6" style="margin-top: 2px">
+                        <label
+                          for="name"
+                          class="sbi-input-label mt-20 sbi-input-text w-100"
+                          id="text-input"
+                        >
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value="Shikhar Kumar"
+                            oninput="validateFormForName()"
+                            autocomplete="off"
+                            maxlength="255"
+                          />
+                          <span
+                            class="placeholder"
+                            style="z-index: 5 !important"
+                            >Name</span
+                          >
+                          <span
+                            id="formError3"
+                            class="text-danger font-10"
+                          ></span>
+                          <div id="error-message1"></div>
+                        </label>
+
+                        <div class="relative mt-40" id="custom-select-menu">
+                          <div
+                            class="flex customBtn position-relative"
+                            id="dropDown"
+                          >
+                            <div
+                              name="accountNumber"
+                              style="font-size: 24px"
+                              id="accountNumber"
+                            ></div>
+                            <img
+                              src="../images/arrow-down.svg"
+                              id="arrow-down"
+                              class="img-fluid"
+                              style="margin-left: auto"
+                            />
+                            <span class="placeholder" id="custumSelect"
+                              >Bank A/C No.</span
+                            >
+                          </div>
+                          <div
+                            class="bg-white position-absolute"
+                            id="dropdown-select-menu"
+                          >
+                            <div id="dropdown-select-menu-item"></div>
+                            <button
+                              type="button"
+                              class="primary font-14 bg-transparent border-0"
+                              style="color: #00b1f2; padding: 10px"
+                            >
+                              +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank account
+                            </button>
+                          </div>
+                        </div>
+                        <label
+                          for="confirmAccount"
+                          class="sbi-input-label position-relative sbi-input-text w-100"
+                          id="input1"
+                          style="margin-top: 46px"
+                        >
+                          <input
+                            type="number"
+                            name="confirmAccount"
+                            id="confirmAccount"
+                            oninput="validateFormForAccount(),this.value = this.value.replace(/[^0-9.]/g, '').replace(/[(?!.*\.\.)]/g, '');"
+                            autocomplete="off"
+                          />
+                          <span class="placeholder suryansh"
+                            >Confirm Bank A/c No.</span
+                          >
+                          <span
+                            id="formError2"
+                            class="font-10"
+                            style="color: red"
+                          ></span>
+                          <div id="error-message2"></div>
+                        </label>
+                        <div class="position-relative" style="margin-top: 46px">
+                          <label
+                            for="ifsc"
+                            class="sbi-input-label sbi-input-text w-100"
+                            id="input2"
+                          >
+                            <input
+                              type="text"
+                              name="ifsc"
+                              id="ifsc"
+                              oninput="validateIfsc()"
+                              autocomplete="off"
+                            />
+                            <!-- <div id="suryansh"></div> -->
+                            <span class="placeholder">IFSC Code</span>
+                            <span
+                              id="formError4"
+                              class="font-10"
+                              style="color: red"
+                            ></span>
+                            <div id="error-message4"></div>
+                          </label>
+                          <a
+                            href="#findYourIfsc"
+                            class="font-14 position-absolute find-your-ifsc top-0"
+                            style="margin-top: 2px"
+                          >
+                            Find your IFSC Code
+                          </a>
+                        </div>
+
+                        <label
+                          for="bank-details"
+                          class="sbi-input-label sbi-input-text w-100"
+                          id="input3"
+                          style="margin-top: 46px"
+                        >
+                          <div
+                            contenteditable
+                            class="overflow-auto"
+                            name="bank-details"
+                            id="bank-details"
+                            style="
+                              padding-bottom: 5px;
+                              min-height: 20px;
+                              cursor: auto;
+                              outline: none;
+                              border-bottom: 1px solid #8a8a96;
+                            "
+                          ></div>
+                          <span class="placeholder2" id="bankDetailsPlaceholder"
+                            >Bank Details</span
+                          >
+                        </label>
+
+                        <label
+                          for="sbi-sample"
+                          class="sbi-input-label mt-30 md-checkbox sbi-input-checkbox"
+                          id="sbi-terms-checkbox"
+                        >
+                          <input
+                            type="checkbox"
+                            id="checkbox"
+                            name="checkbox"
+                            value=""
+                            style="
+                              border-radius: 50% !important;
+                              appearance: none !important;
+                              -webkit-appearance: none !important;
+                            "
+                            oninput="enableConfirmBtn()"
+                            id="sbi-sample"
+                          />
+                          <label class="p-0" style="margin-top: 2px"
+                            >I agree to the
+                            <a href="#" class="underlined text-dark"
+                              >Terms and Conditions</a
+                            ></label
+                          >
+                        </label>
+                        <button
+                          type="submit"
+                          id="confirm-btn"
+                          style="min-width: max-content"
+                          class="sbi-button font-600 col-lg-2 col-md-2 primary d-lg-none d-md-none d-block mt-40 mb-0"
+                          disabled
+                        >
+                          Confirm
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bottom-0 position-fixed w-100"
+        style="z-index: 11"
+        id="footer"
+      >
+        <div
+          class="row d-lg-flex d-md-flex d-none gx-0 mx-0 py-20 align-items-center sbi-footer"
+        >
+          <div class="col-lg-2 px-0 col-md-2" id="amount-col">
+            <div class="text-gray font-14">Amount</div>
+            <div class="font-18" id="amount-slider-input-footer">₹ 10,000</div>
+          </div>
+          <div class="col-lg-2 px-0 col-md-2">
+            <div class="text-gray font-14">Tenure Period</div>
+            <div class="font-18" id="tenure-period">-</div>
+          </div>
+          <div class="col-lg-2 px-0 col-md-2">
+            <div class="text-gray font-14">Rate of Interest</div>
+            <div class="font-18" id="rateOfInterestFooter">-</div>
+          </div>
+          <div class="col-lg-2 px-0 col-md-2">
+            <div class="text-gray font-14">Processing Fee</div>
+            <div class="font-18" id="processingFeeFooter">-</div>
+          </div>
+          <div class="col-lg-2 px-0 col-md-2" id="emi-col">
+            <div class="text-gray font-14">EMI</div>
+            <div id="calculated-emi-footer" class="font-18">-</div>
+          </div>
+
+          <button
+            type="submit"
+            form="form2"
+            id="confirm-sm-btn"
+            style="min-width: max-content; height: 43px"
+            class="sbi-button font-600 col-lg-2 col-md-2 primary mb-0"
+            disabled
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="generateOtp" class="modal" role="dialog">
+      <div
+        class="modal-body text-center position-relative encash-otp-modal"
+        style="
+          padding-inline: 80px;
+          max-width: 580px;
+          height: 398px;
+          font-family: Open Sans, sans-serif;
+        "
+      >
+        <div
+          class="position-absolute ml-20"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="handleCancel()"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div class="font-28 fw-bold mb-20 oneTimeVerification">
+          One Time Verification
+        </div>
+        <p class="m-0 pb-40">
+          Enter the 6-digit OTP sent on your registered mobile number
+          <span class="text-blue">+91 xxxxxx5010</span>
+          and email ID
+          <span class="text-blue">yyyy@gmail.com</span>
+        </p>
+        <form
+          name="form3"
+          action="#"
+          class="font-14 flex flex-col"
+          method="post"
+          autocomplete="off"
+        >
+          <div class="flex justify-center mx-auto" id="OTPInput"></div>
+          <input type="number" hidden id="otp" name="otp" value="" min="0" />
+          <span id="otpFormError" class="" style="color: #f74747"></span>
+          <div
+            id="resendBtn"
+            class="underlined text-blue mt-40"
+            style="cursor: pointer"
+            onclick="otpSent()"
+          >
+            Resend Code
+          </div>
+          <div class="my-10" id="otp-sent" style="visibility: hidden">.</div>
+
+          <button
+            id="otp-modal-btn"
+            type="button"
+            style="max-width: 180px"
+            class="sbi-button font-600 font-16 primary mx-auto mb-0"
+            onclick="handleModal()"
+            disabled
+          >
+            Confirm
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="failed" class="modal" role="dialog">
+      <div
+        class="modal-body text-center position-relative"
+        style="padding-inline: 80px; font-family: Open Sans, sans-serif"
+      >
+        <div
+          class="position-absolute ml-20 d-sm-none d-block"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="handleCancel()"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div class="font-28 fw-bold mb-40 currentlyUnable">
+          Currently Unable to Verify
+        </div>
+        <p class="m-0 pb-40">
+          Too many unsuccessful attempts have been made. Please try again after
+          some time.
+        </p>
+        <p class="m-0">
+          If you are having trouble verifying
+          <a href="" class="underlined">Click here</a> to contact us.
+        </p>
+
+        <button
+          id="otp-modal-close-btn"
+          type="button"
+          style="max-width: 180px"
+          class="sbi-button font-600 primary mx-auto mt-40 mb-0"
+          onclick="handleCancel()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div id="findYourIfsc" class="modal" role="dialog">
+      <div
+        class="modal-body text-center position-relative"
+        style="
+          padding-inline: 80px;
+          min-height: 473px;
+          font-family: Open Sans, sans-serif;
+        "
+      >
+        <div
+          class="position-absolute ml-20"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="closeIfscModal()"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div
+          class="text-start d-md-none d-block font-14 mx-auto mb-40"
+          style="
+            width: 228px;
+            padding: 15px;
+            background-color: #f2f7fd;
+            right: -55%;
+            top: -7px;
+          "
+        >
+          Please enter atleast the first 3 letters of city name to search and
+          proceed.
+        </div>
+        <div
+          class="font-28 fw-bold mt-10 currentlyUnable"
+          style="margin-bottom: 46px"
+        >
+          Fill in the details below to find the IFSC code of your bank
+        </div>
+        <form
+          name="form3"
+          id="form3"
+          class="position-relative"
+          onsubmit="handleSubmit3();return false"
+        >
+          <div class="position-relative">
+            <div class="flex customBtn position-relative">
+              <label
+                for="bankName"
+                class="sbi-input-label sbi-input-text w-100"
+              >
+                <input
+                  type="text"
+                  id="bankName"
+                  name="bankName"
+                  oninput="liveSearch('.bank-name','bankName','bank-toolTip','arrow-down-bankName')"
+                  autocomplete="off"
+                  style="border-radius: 0 !important"
+                />
+
+                <span class="placeholder">Bank Name</span>
+              </label>
+              <img
+                src="../images/arrow-down.svg"
+                id="arrow-down-bankName"
+                class="img-fluid position-absolute"
+                style="right: 0"
+              />
+            </div>
+            <div
+              class="bg-white text-start position-absolute w-100 overflow-scroll d-none"
+              style="
+                max-height: 258px;
+                box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+                z-index: 1;
+              "
+              id="dropdown-select-ifsc-bank"
+            >
+              <div class="font-14" id="dropdown-select-ifsc-item-bank"></div>
+            </div>
+            <div
+              class="clip_path text-start d-none font-14 position-absolute"
+              id="bank-toolTip"
+              style="
+                width: 228px;
+                padding: 15px;
+                padding-left: 27px;
+                background-color: #f2f7fd;
+                right: -55%;
+                top: -7px;
+              "
+            >
+              Please enter atleast the first 3 letters of bank name to search
+              and proceed.
+            </div>
+          </div>
+
+          <div class="position-relative" style="margin-top: 46px">
+            <div class="flex customBtn position-relative">
+              <label for="city" class="sbi-input-label sbi-input-text w-100">
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  oninput="liveSearch('.city','city','city-toolTip','arrow-down-city')"
+                  autocomplete="off"
+                  style="border-radius: 0 !important"
+                />
+                <span class="placeholder">City</span>
+              </label>
+              <img
+                src="../images/arrow-down.svg"
+                id="arrow-down-city"
+                class="img-fluid position-absolute"
+                style="right: 0"
+              />
+            </div>
+            <div
+              class="bg-white text-start position-absolute w-100 overflow-scroll d-none"
+              style="
+                max-height: 190px;
+                box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+                z-index: 1;
+              "
+              id="dropdown-select-ifsc-city"
+            >
+              <div class="font-14" id="dropdown-select-ifsc-item-city"></div>
+            </div>
+            <div
+              class="clip_path text-start d-none font-14 position-absolute"
+              id="city-toolTip"
+              style="
+                width: 228px;
+                padding: 15px;
+                padding-left: 27px;
+                background-color: #f2f7fd;
+                right: -55%;
+                top: -7px;
+              "
+            >
+              Please enter atleast the first 3 letters of city name to search
+              and proceed.
+            </div>
+          </div>
+
+          <div class="position-relative" style="margin-top: 46px">
+            <label
+              for="searchBranch"
+              class="sbi-input-label sbi-input-text w-100"
+              id="input2"
+            >
+              <input
+                type="text"
+                name="searchBranch"
+                id="searchBranch"
+                autocomplete="off"
+                oninput="liveSearch('.searchBranch','searchBranch','search-toolTip')"
+                style="border-radius: 0 !important"
+              />
+              <span class="placeholder">Search Branch</span>
+              <span id="formError4" class="font-10" style="color: red"></span>
+              <div id="error-message4"></div>
+            </label>
+            <div
+              class="clip_path text-start d-none font-14 position-absolute"
+              id="search-toolTip"
+              style="
+                width: 228px;
+                padding: 15px;
+                padding-left: 27px;
+                background-color: #f2f7fd;
+                right: -55%;
+                top: -7px;
+              "
+            >
+              Please enter atleast the first 3 letters branch name to search and
+              proceed.
+            </div>
+          </div>
+          <div
+            class="d-sm-flex mx-auto align-items-center mt-40"
+            style="width: fit-content"
+            id="ifscBtnWrapper"
+          >
+            <button
+              type="button"
+              id="searchIfsc"
+              class="sbi-button font-600 primary mx-auto mb-0"
+              onclick="window.location.href='#searchForBank'"
+              disabled
+            >
+              Search
+            </button>
+            <button
+              id="resetBtn"
+              type="button"
+              class="underlined ml-40 bg-transparent border-0"
+              style="font-weight: 400; font-size: 16px"
+              onclick="handleIfscReset()"
+              disabled
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="searchForBank" class="modal" role="dialog">
+      <div
+        class="modal-body text-center position-relative"
+        style="
+          padding-inline: 20px;
+          max-width: 780px;
+          height: auto;
+          font-family: Open Sans, sans-serif;
+        "
+      >
+        <div
+          class="position-absolute ml-20"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="window.location.href='#findYourIfsc'"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div class="font-28 fw-bold mb-20 currentlyUnable">
+          Select the Branch
+        </div>
+        <form name="form4" id="form4" onsubmit="handleSubmit4();return false">
+          <div id="searchForBankCard" class="flex-column-reverse flex"></div>
+          <div
+            class="d-sm-flex mx-auto align-items-center mt-40"
+            id="searchForBankBtnWrapper"
+            style="width: fit-content"
+          >
+            <button
+              type="button"
+              class="sbi-button font-600 primary mx-auto mb-0"
+              onclick="handleCancel()"
+            >
+              Confirm
+            </button>
+            <div
+              class="sbi-link underlined ml-40"
+              style="font-weight: 400; font-size: 16px"
+              onclick="window.location.href='#findYourIfsc'"
+            >
+              Back
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    // ----------------------------------------------------------------------------------------------
+    // ------------------------------------------ OTP Flow ------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+    function handleCancel() {
+      document.forms["form2"]["checkbox"].checked = false;
+      window.location.href = "#";
+      document.getElementById("accordion-btn2").click();
+      document.getElementById("step-2-completed").style.opacity = 0;
+      setErrors("otpError", "");
+      count = 0;
+      count1 = 0;
+      resendBtn.classList.add("underlined");
+      resendBtn.style.cursor = "pointer";
+      resendBtn.classList.remove("text-gray", "mt-30");
+      message.style.margin = "10px 0";
+      modalBtn.setAttribute("disabled", "");
+      for (let i = 0; i < 7; i++) {
+        const otpField = document.getElementById(`otp-field${i}`);
+        if (otpField) otpField.value = "";
+      }
+      enableConfirmBtn();
+      const x = document.querySelectorAll(".xy");
+      window.scrollTo(0, document.body.scrollHeight + x?.[0]?.offsetHeight);
+      message.innerHTML = ".";
+    }
+
+    function closeIfscModal() {
+      window.location.href = "#";
+      const x = document.querySelectorAll(".xy");
+      window.scrollTo(0, document.body.scrollHeight + x?.[0]?.offsetHeight);
+    }
+
+    var count = 0;
+    const modalBtn = document.getElementById("otp-modal-btn");
+    const message = document.getElementById("otp-sent");
+    const resendBtn = document.getElementById("resendBtn");
+    let timerId;
+    function otpSent() {
+      count += 1;
+      setErrors("otpError", "");
+      modalBtn.style.marginTop = "0";
+      document.getElementById("otpFormError").style.margin = 0;
+      resendBtn.style.marginTop = "40px";
+      message.style.marginBottom = "10px";
+      if (count < 4) {
+        message.innerHTML = "OTP has been resent";
+        message.style.color = "#2d2d2d";
+        message.style.visibility = "visible";
+        clearTimeout(timerId);
+        timerId = setTimeout(() => {
+          resendBtn.style.marginTop = "40px";
+          message.style.visibility = "hidden";
+          message.style.marginTop = "10px";
+          message.style.marginBottom = "10px";
+        }, 3000);
+        modalBtn.setAttribute("disabled", "");
+      } else {
+        clearTimeout(timerId);
+        message.innerHTML = `You have exhausted the number of times you can ask for the one time password (OTP) to be resent`;
+        message.style.visibility = "visible";
+        resendBtn.classList.add("text-gray");
+        resendBtn.classList.add("mt-30");
+        resendBtn.classList.remove("underlined");
+        resendBtn.style.cursor = "not-allowed";
+        message.style.marginBottom = "20px";
+        message.style.color = "#f74747";
+        modalBtn.setAttribute("disabled", "");
+      }
+
+      for (let i = 0; i < 7; i++) {
+        const otpField = document.getElementById(`otp-field${i}`);
+        if (otpField) otpField.value = "";
+      }
+    }
+
+    const element = document.getElementById("OTPInput");
+    for (let i = 0; i < 6; i++) {
+      let inputField = document.createElement("input");
+      inputField.type = "number";
+      inputField.className = "px-1";
+      inputField.style.cssText =
+        "color: transparent;border-radius:0 !important; border:none; border-bottom:1px solid #8a8a96; font-weight:bold ; width:24px; outline:none; color:#2d2d2d; text-align:center; font-size:20px";
+      inputField.id = "otp-field" + i;
+      inputField.maxLength = 1;
+      element.appendChild(inputField);
+    }
+
+    /*  This is for switching back and forth the input box for user experience */
+    const inputs = document.querySelectorAll("#OTPInput > *[id]");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("keydown", function (event) {
+        if (event.key === "Backspace") {
+          if (inputs[i].value == "") {
+            if (i != 0) {
+              inputs[i - 1].focus();
+            }
+          } else {
+            inputs[i].value = "";
+          }
+        } else if (event.key === "ArrowLeft" && i !== 0) {
+          inputs[i - 1].focus();
+        } else if (event.key === "ArrowRight" && i !== inputs.length - 1) {
+          inputs[i + 1].focus();
+        } else if (event.key != "ArrowLeft" && event.key != "ArrowRight") {
+          inputs[i].value = "";
+        }
+      });
+
+      inputs[i].addEventListener("keydown", function (event) {
+        let inputLength = "";
+        for (let i = 0; i < inputs.length; i++) {
+          inputLength += inputs[i].value;
+        }
+
+        if (inputLength.length != "6") {
+          modalBtn.setAttribute("disabled", "");
+        } else {
+          modalBtn.removeAttribute("disabled", "");
+        }
+      });
+
+      inputs[i].addEventListener("input", function () {
+        let inputLength = "";
+        for (let i = 0; i < inputs.length; i++) {
+          inputLength += inputs[i].value;
+        }
+
+        if (inputLength.length >= "6") {
+          modalBtn.removeAttribute("disabled", "");
+        }
+        if (count > 3) {
+          modalBtn.setAttribute("disabled", "");
+        }
+
+        inputs[i].value = inputs[i].value.toUpperCase();
+        if (i === inputs.length - 1 && inputs[i].value !== "") {
+          return true;
+        } else if (inputs[i].value !== "") {
+          inputs[i + 1].focus();
+        }
+      });
+    }
+
+    // on submit
+    var count1 = 0;
+    function handleModal() {
+      count1 += 1;
+      const otpErrMessage = document.getElementById("otpFormError");
+      if (window.innerWidth < 575) {
+        modalBtn.style.marginTop = 0;
+      }
+      let compiledOtp = "";
+      for (let i = 0; i < inputs.length; i++) {
+        compiledOtp += inputs[i].value;
+      }
+      document.getElementById("otp").value = compiledOtp;
+      if (count1 == 6) {
+        window.location.href = "#failed";
+      }
+      if (compiledOtp == "666666") {
+        setErrors("otpError", "");
+        count1 = 0;
+        window.location.href = "/success-pages";
+      } else {
+        resendBtn.style.marginTop = "21px";
+        otpErrMessage.style.marginTop = "10px";
+
+        setErrors(
+          "otpError",
+          `${count1 < 6 ? count1 : "5"} of 5 failed verification attempts`
+        );
+      }
+    }
+
+    // ----------------------------------------------------------------------------------------------
+    // ------------------------------------------ Bottom Sheet ------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+
+    function bottomSheet() {
+      const drawer = document.getElementById("upper-section");
+      const lowerSection = document.getElementById("lower-section");
+      const bottomSheetWrapper = document.getElementById("bottomSheetWrapper");
+      drawer.classList.toggle("animate-scale-to-zero");
+      if (drawer.getAttribute("class").includes("animate-scale-to-zero")) {
+        drawer.style.position = "relative";
+        drawer.style.top = "0";
+        drawer.style.transition = "none";
+        bottomSheetWrapper.style.marginTop = "0";
+        lowerSection.style.minHeight = "calc(100vh - 80px)";
+      } else {
+        drawer.style.position = "fixed";
+        drawer.style.top = "60px";
+        bottomSheetWrapper.style.marginTop = "168px";
+        lowerSection.style.minHeight = "calc(100vh - 280px)";
+      }
+    }
+
+    // ----------------------------------------------------------------------------------------------
+    // ------------------------------------------ Find Your Ifsc ------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+
+    function liveSearch(data, query, toolTip, icon) {
+      let item = document.querySelectorAll(data);
+      const toolTipElement = document.getElementById(toolTip);
+      const arrow = document.getElementById(icon);
+      let search_query = document.getElementById(query).value;
+      if (search_query.length >= 3) {
+        if (window.innerWidth > 990) {
+          toolTipElement.style.display = "none";
+        }
+        let matchingCount = 0;
+        for (var i = 0; i < item.length; i++) {
+          if (
+            item[i].innerText.toLowerCase().includes(search_query.toLowerCase())
+          ) {
+            matchingCount++;
+            item[i].classList.remove("d-none");
+          } else {
+            item[i].classList.add("d-none");
+          }
+        }
+        if (matchingCount === 0) {
+          arrow.classList.remove("rotateIcon");
+        } else {
+          arrow.classList.add("rotateIcon");
+        }
+      } else {
+        if (window.innerWidth > 990) {
+          toolTipElement.style.display = "block";
+        }
+
+        for (var i = 0; i < item.length; i++) {
+          if (
+            item[i].innerText.toLowerCase().includes(search_query.toLowerCase())
+          ) {
+            item[i].classList.remove("d-none");
+          }
+        }
+      }
+    }
+
+    const bankName = document.getElementById("bankName");
+    const city = document.getElementById("city");
+    const searchBranch = document.getElementById("searchBranch");
+    const searchIfsc = document.getElementById("searchIfsc");
+    const bankToolTip = document.getElementById("bank-toolTip");
+    const cityToolTip = document.getElementById("city-toolTip");
+    const searchToolTip = document.getElementById("search-toolTip");
+    const resetBtn = document.getElementById("resetBtn");
+    const bankArrow = document.getElementById("arrow-down-bankName");
+    const cityArrow = document.getElementById("arrow-down-city");
+
+    document.getElementById("bank-details").addEventListener("click", (e) => {
+      e.stopPropagation();
+      document
+        .getElementById("bankDetailsPlaceholder")
+        .classList.add("valueExistsForBankDetails");
+    });
+    function bankDetailsInactive() {
+      if (!document.getElementById("bank-details").innerText) {
+        document
+          .getElementById("bankDetailsPlaceholder")
+          .classList.remove("valueExistsForBankDetails");
+      }
+    }
+
+    //input field 1- BankName
+    bankName.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document
+        .getElementById("dropdown-select-ifsc-bank")
+        .classList.toggle("d-none");
+      bankArrow.classList.toggle("rotateIcon");
+      document
+        .getElementById("dropdown-select-ifsc-city")
+        .classList.add("d-none");
+      if (window.innerWidth > 990) {
+        bankToolTip.classList.remove("d-none");
+        cityToolTip.classList.add("d-none");
+        searchToolTip.classList.add("d-none");
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (e.target.closest("#dropdown-select-ifsc-bank")) return;
+      document
+        .getElementById("dropdown-select-ifsc-bank")
+        .classList.add("d-none");
+      if (e.target.closest("#bank-toolTip")) return;
+      if (window.innerWidth > 990) {
+        bankToolTip.classList.add("d-none");
+      }
+      if (e.target.closest("#arrow-down-bankName")) return;
+      bankArrow.classList.remove("rotateIcon");
+    });
+
+    //input field 2- City
+    city.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document
+        .getElementById("dropdown-select-ifsc-city")
+        .classList.toggle("d-none");
+      cityArrow.classList.toggle("rotateIcon");
+      if (window.innerWidth > 990) {
+        cityToolTip.classList.remove("d-none");
+        bankToolTip.classList.add("d-none");
+        searchToolTip.classList.add("d-none");
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (e.target.closest("#dropdown-select-ifsc-city")) return;
+      document
+        .getElementById("dropdown-select-ifsc-city")
+        .classList.add("d-none");
+      if (e.target.closest("#city-toolTip")) return;
+      if (window.innerWidth > 990) {
+        cityToolTip.classList.add("d-none");
+      }
+      if (e.target.closest("#arrow-down-city")) return;
+      cityArrow.classList.remove("rotateIcon");
+    });
+
+    // input field 3- search bank
+    searchBranch.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (window.innerWidth > 990) {
+        cityToolTip.classList.add("d-none");
+        bankToolTip.classList.add("d-none");
+        searchToolTip.classList.remove("d-none");
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (e.target.closest("#city-toolTip")) return;
+      if (window.innerWidth > 990) {
+        searchToolTip.classList.add("d-none");
+      }
+    });
+
+    function handleIfscReset() {
+      bankName.value = "";
+      bankName.removeAttribute("class");
+      city.value = "";
+      city.removeAttribute("class");
+      searchBranch.value = "";
+      searchBranch.removeAttribute("class");
+      resetBtn.setAttribute("disabled", "");
+      searchIfsc.setAttribute("disabled", "");
+      resetBtn.classList.remove("sbi-link");
+    }
+    const Banks = [
+      { name: "Ahmedabad District Cooperative Bank" },
+      { name: "Ahemdnagar Merchants Cooperative Bank" },
+      { name: "OP Bank Ltd." },
+      { name: "Airtel Payments Bank Ltd." },
+      { name: "Andhra Pradesh Grameena Vikas Bank" },
+      { name: "Apna Sahakari Bank Ltd." },
+      { name: "Arvind Sahakari Bank Ltd." },
+      { name: "AU Small Finance Bank Ltd." },
+    ];
+
+    const Cities = [
+      { name: "Allu Nagar Diguria" },
+      { name: "Bargur" },
+      { name: "Gurdaspur" },
+      { name: "Gurugram" },
+      { name: "Gursarai" },
+      { name: "Guruvayur" },
+    ];
+
+    const searchForBank = [
+      {
+        bank: "Bank Name",
+        value1: "HDFC Bank",
+        branch: "HDFC Bank",
+        value2: "Gurgaon, DLF Cyber City",
+        ifsc: "IFSC",
+        value3: "HDFC000000459",
+        address: "Address",
+        value4: "Building No 10, UGF, Tower A Dlf Cyber City Gurugram - 122002",
+      },
+      {
+        bank: "Bank Name",
+        value1: "HDFC Bank",
+        branch: "HDFC Bank",
+        value2: "Gurgaon, DLF Cyber City",
+        ifsc: "IFSC",
+        value3: "HDFC000000459",
+        address: "Address",
+        value4: "Building No 10, UGF, Tower A Dlf Cyber City Gurugram - 122002",
+      },
+      {
+        bank: "Bank Name",
+        value1: "HDFC Bank",
+        branch: "HDFC Bank",
+        value2: "Gurgaon, DLF Cyber City",
+        ifsc: "IFSC",
+        value3: "HDFC000000459",
+        address: "Address",
+        value4: "Building No 10, UGF, Tower A Dlf Cyber City Gurugram - 122002",
+      },
+    ];
+
+    function checkIfscDropdown() {
+      var dropCount = 0;
+      Banks.forEach((e, index) => {
+        if (bankName.value == e.name) {
+          dropCount++;
+        }
+      });
+      Cities.forEach((e, index) => {
+        if (city.value == e.name) {
+          dropCount++;
+        }
+      });
+      return dropCount;
+    }
+
+    bankName.addEventListener("input", () => {
+      if (checkIfscDropdown() != 2) {
+        searchIfsc.setAttribute("disabled", "");
+      } else {
+        searchIfsc.removeAttribute("disabled", "");
+      }
+    });
+    city.addEventListener("input", () => {
+      if (checkIfscDropdown() != 2) {
+        searchIfsc.setAttribute("disabled", "");
+      } else {
+        searchIfsc.removeAttribute("disabled", "");
+      }
+    });
+    searchBranch.addEventListener("input", () => {
+      if (searchBranch.value) {
+        resetBtn.removeAttribute("disabled", "");
+        resetBtn.classList.add("sbi-link");
+        resetBtn.style.cursor = "pointer";
+      }
+
+      if (checkIfscDropdown() == 2 && searchBranch.value) {
+        searchIfsc.removeAttribute("disabled", "");
+      } else {
+        searchIfsc.setAttribute("disabled", "");
+      }
+    });
+
+    const getIfscData = (e, field, dataCollection, id, arrow) => {
+      const index = e.currentTarget.getAttribute("data-index");
+      const ifscDropdown = document.getElementById(id);
+      const toolTip = document.getElementById(id);
+      const toggleArrow = document.getElementById(arrow);
+      const data = dataCollection[index];
+      const Ifsc = document.forms["form3"][field];
+      ifscDropdown.click();
+      toolTip.style.display = "none";
+      Ifsc.value = data.name;
+      Ifsc.focus();
+      if (bankName.value && city.value && searchBranch.value) {
+        searchIfsc.removeAttribute("disabled", "");
+      }
+      toggleArrow.classList.remove("rotateIcon");
+      resetBtn.removeAttribute("disabled", "");
+      resetBtn.classList.add("sbi-link");
+      resetBtn.style.cursor = "pointer";
+    };
+
+    (function () {
+      Banks.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "dropdown-select-ifsc-item-bank"
+          ).innerHTML += `<div data-index='${index}' class="selectedBank bank-name p-10">
+      <div class="font-14" id="ifscChangeFont">${e.name}</div>
+      </div>`)
+      );
+
+      const selectedBank = document.getElementsByClassName("selectedBank");
+      for (let i = 0; i < selectedBank.length; i++) {
+        selectedBank[i].addEventListener("click", (e) =>
+          getIfscData(
+            e,
+            "bankName",
+            Banks,
+            "bank-toolTip",
+            "arrow-down-bankName"
+          )
+        );
+      }
+
+      Cities.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "dropdown-select-ifsc-item-city"
+          ).innerHTML += `<div data-index='${index}' class="selectedCity city p-10">
+      <div class="font-14" id="ifscChangeFont">${e.name}</div>
+      </div>`)
+      );
+      const selectedCity = document.getElementsByClassName("selectedCity");
+      for (let i = 0; i < selectedCity.length; i++) {
+        selectedCity[i].addEventListener("click", (e) =>
+          getIfscData(e, "city", Cities, "city-toolTip", "arrow-down-city")
+        );
+      }
+
+      searchForBank.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "searchForBankCard"
+          ).innerHTML += `      <div data-index='${index}'
+            class="flex align-items-center rounded-1 p-20 bankCard"
+            style="gap: 20px; border: 0.5px solid #00b1f2;"
+          >
+            <label class="sbi-label-radio m-0 flex" style="gap:20px">
+              <input
+                class="sbi-def-radio"
+                type="radio"
+                name="toss"
+                id="radio-ifsc"
+                checked
+              />
+              <div
+                class="sbi-radio-btn"
+                style="height: 17px; width: 17px;min-width:17px"
+                ></div>
+              <div
+              class="flex text-start font-14 flex-wrap"
+              style="gap: 20px"
+              id="cardRow"
+              >
+              <div class="" style="min-width: 120px">
+                <div class="font-11 mb-10 text-gray">${e.bank}</div>
+                <div>${e.value1}</div>
+                </div>
+              <div class="" style="min-width: 120px">
+                <div class="font-11 mb-10 text-gray">${e.branch}</div>
+                <div style="max-width: 120px">${e.value2}</div>
+              </div>
+              <div class="" style="min-width: 120px">
+                <div class="font-11 mb-10 text-gray">${e.ifsc}</div>
+                <div>${e.value3}</div>
+              </div>
+              <div class="" style="max-width: 240px">
+                <div class="font-11 mb-10 text-gray">${e.address}</div>
+                <div>
+                  ${e.value4}
+                </div>
+              </div>
+              </label>
+            </div>
+          </div>`)
+      );
+      const bankCard = document.getElementsByClassName("bankCard");
+      for (let i = 0; i < bankCard.length; i++) {
+        bankCard[i].addEventListener("click", (e) =>
+          getIfscData(e, "city", Cities)
+        );
+      }
+    })();
+
+    // ----------------------------------------------------------------------------------------------
+    // ------------------------------------------ Encash Step 1 ------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+
+    const accountDropdown = document.getElementById("dropDown");
+    const accountDropdownMenu = document.getElementById("dropdown-select-menu");
+    accountDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      accountDropdownMenu.classList.toggle("hidden");
+      document.getElementById("arrow-down").classList.toggle("rotateIcon");
+    });
+
+    document.addEventListener("click", (e) => {
+      const arrow = document.getElementById("arrow-down").getAttribute("class");
+      if (e.target.closest("#dropdown-select-menu")) return;
+      accountDropdownMenu.classList.add("hidden");
+      if (arrow.includes("rotateIcon")) {
+        document.getElementById("arrow-down").classList.toggle("rotateIcon");
+      }
+    });
+
+    const AccountDetails = [
+      {
+        name: "hdfc",
+        accountNo: "0000123456789",
+        ifsc: "HDFC1234",
+        details: "HDFC BANK LTD. (3307016873912) NEW DELHI",
+        address:
+          "HDFC Bank, New Delhi - Vasundhra, Manav Ashray Bldg 11, Service Centre, Opp DDA Sports Complex",
+      },
+      {
+        name: "icici",
+        accountNo: "0000123456789",
+        ifsc: "ICICI1234",
+        details: "ICICI BANK LTD. (1234567890123) NEW DELHI",
+        address:
+          "HDFC Bank, New Delhi - Vasundhra, Manav Ashray Bldg 11, Service Centre, Opp DDA Sports Complex",
+      },
+    ];
+
+    const getData = (e) => {
+      const index = e.currentTarget.getAttribute("data-index");
+      const data = AccountDetails[index];
+      const Ifsc = document.forms["form2"]["ifsc"];
+      const details = document.getElementById("bank-details");
+      const confirmAcc = document.forms["form2"]["confirmAccount"];
+      const accNo = document.getElementById("accountNumber");
+      Ifsc.value = data.ifsc;
+      details.innerText = data.address;
+      accNo.innerText = data.accountNo;
+      Ifsc.focus();
+      details.focus();
+      confirmAcc.focus();
+      document.getElementById("dropDown").click();
+      document.getElementById("custumSelect").classList.add("valueExists");
+      document
+        .getElementById("bankDetailsPlaceholder")
+        .classList.add("valueExistsForBankDetails");
+    };
+
+    const tenureDropdown = document.getElementById("tenureDropdown");
+    const tenureDropdownMenu = document.getElementById(
+      "dropdown-select-tenure"
+    );
+    tenureDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      tenureDropdownMenu.classList.toggle("hidden1");
+      document
+        .getElementById("arrow-down-tenure")
+        .classList.toggle("rotateIconTenure");
+    });
+
+    document.addEventListener("click", (e) => {
+      const arrow1 = document
+        .getElementById("arrow-down-tenure")
+        .getAttribute("class");
+      if (e.target.closest("#dropdown-select-tenure")) return;
+      tenureDropdownMenu.classList.add("hidden1");
+      if (arrow1.includes("rotateIconTenure")) {
+        document
+          .getElementById("arrow-down-tenure")
+          .classList.toggle("rotateIconTenure");
+      }
+    });
+
+    const TenureInMonths = [
+      { id: 0 },
+      { id: 6 },
+      { id: 12 },
+      { id: 18 },
+      { id: 24 },
+    ];
+
+    const getTenureData = (e) => {
+      const index = e.currentTarget.getAttribute("data-index");
+      const data = TenureInMonths[index];
+      const tenureValue = document.getElementById("tenure-slider-input");
+      tenureValue.innerHTML = data.id;
+      document.getElementById("tenureDropdown").click();
+      InputTenureSlider();
+    };
+
+    function validateForm1() {
+      var returnvalue = true;
+      var amountSlider = document.forms["form1"]["slider-amount"];
+
+      if (amountSlider.value > 50000) {
+        setErrors("slider-amount", "Maximum amount must not exceed Rs. 50,000");
+        amountSlider.style.borderColor = "red";
+        return (returnvalue = false);
+      }
+      if (amountSlider.value < 10000) {
+        setErrors("slider-amount", "Amount must be Rs. 10,000 or higher");
+        amountSlider.style.borderColor = "red";
+        return (returnvalue = false);
+      } else {
+        setErrors("slider-amount", "");
+        document.getElementById(
+          "error-message3"
+        ).innerHTML = `<img src="../images/green-tick.svg" class="img-fluid position-absolute mt-3 top-0"
+                      style="height: 12px;width: 13px;right: 5px;cursor:default" />`;
+        amountSlider.style.borderColor = "";
+      }
+      return returnvalue;
+    }
+
+    window.onpaint = myFn();
+    var Amount = document.getElementById("amountSlider");
+    var Tenure = document.getElementById("tenureSlider");
+    var tenureOutput = $("#tenure-slider-input");
+    var EMI = document.getElementById("calculated-emi");
+    var tenurePeriod = document.getElementById("tenure-period");
+    var EMIFooter = document.getElementById("calculated-emi-footer");
+    var amountOutput = document.getElementById("slider-amount");
+    var amountOutputFooter = document.getElementById(
+      "amount-slider-input-footer"
+    );
+    var nextBtn = document.getElementById("next-btn");
+    var confirmBtn = document.getElementById("confirm-btn");
+    var nextBtnMobile = document.getElementById("next-sm-btn");
+    var confirmBtnMobile = document.getElementById("confirm-sm-btn");
+    amountOutput.value = Amount.value * 1000;
+
+    function updateStates() {
+      EMI.innerHTML = `₹ 0 /month*`;
+      EMIFooter.innerHTML = `-`;
+      document.getElementById("rateOfInterest").innerHTML = "0";
+      document.getElementById("rateOfInterestFooter").innerHTML = "-";
+      document.getElementById("processingFee").innerHTML = "0";
+      document.getElementById("processingFeeFooter").innerHTML = "-";
+      if (
+        !(
+          Tenure.value == 0 ||
+          amountOutput.value < 10000 ||
+          amountOutput.value > 50000
+        )
+      ) {
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        } else {
+          confirmBtn.setAttribute("disabled", "");
+          confirmBtnMobile.setAttribute("disabled", "");
+        }
+      } else {
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+      }
+    }
+
+    function setSliderValue(id) {
+      const rangeELement = document.getElementById(id);
+      var value =
+        ((rangeELement.value - rangeELement.min) /
+          (rangeELement.max - rangeELement.min)) *
+        100;
+      rangeELement.style.background =
+        "linear-gradient(to right, #00b1f2 0%, #00b1f2 " +
+        value +
+        "%, #f5f5f5 " +
+        value +
+        "%, #f5f5f5 100%)";
+    }
+
+    function myRangeSlider() {
+      amountOutput.value = Amount.value * 1000;
+      amountOutputFooter.innerHTML = `₹ ${Amount.value * 1000}`;
+      myTenureSlider();
+      setSliderValue("amountSlider");
+    }
+
+    function InputAmountSlider() {
+      Amount.value = amountOutput.value.replace(/[^0-9.]/g, "") / 1000;
+      amountOutputFooter.innerHTML = `₹ ${amountOutput.value
+        .replace(/[^0-9.]/g, "")
+        .replace(/[(?!.*\.\.)]/g, "")}`;
+      validateForm1();
+      setSliderValue("amountSlider");
+      if (
+        amountOutput.value < 10000 ||
+        amountOutput.value > 50000 ||
+        tenureOutput.html() == 0
+      ) {
+        nextBtn.setAttribute("disabled", "");
+        nextBtnMobile.setAttribute("disabled", "");
+      } else {
+        nextBtn.removeAttribute("disabled", "");
+        nextBtnMobile.removeAttribute("disabled", "");
+      }
+      if (amountOutput.value < 10000 || amountOutput.value > 50000) {
+        updateStates();
+        amountOutputFooter.innerHTML = `NIL`;
+      } else {
+        myTenureSlider();
+      }
+    }
+
+    function myTenureSlider() {
+      tenureOutput.html(Tenure.value);
+
+      const PR = amountOutput.value * 0.035;
+      setSliderValue("tenureSlider");
+      if (
+        Tenure.value == 0 ||
+        amountOutput.value < 10000 ||
+        amountOutput.value > 50000
+      ) {
+        updateStates();
+      } else {
+        EMI.innerHTML = `₹ ${(
+          PR *
+          (Math.pow(1.045, Tenure.value) / (Math.pow(1.045, Tenure.value) - 1))
+        ).toFixed(2)} /month*`;
+        EMIFooter.innerHTML = `₹ ${(
+          PR *
+          (Math.pow(1.045, Tenure.value) / (Math.pow(1.045, Tenure.value) - 1))
+        ).toFixed(2)} /month`;
+        document.getElementById("rateOfInterest").innerHTML = "3.5% p.a.";
+        document.getElementById("rateOfInterestFooter").innerHTML = "3.5% p.a.";
+        document.getElementById("processingFee").innerHTML = "₹ 499";
+        document.getElementById("processingFeeFooter").innerHTML = "₹ 499";
+      }
+
+      tenurePeriod.innerHTML = `${
+        Tenure.value == 0 ? "-" : `${tenureOutput.html()} months`
+      }
+        `;
+      if (validateForm1()) {
+        nextBtn.removeAttribute("disabled", "");
+        nextBtnMobile.removeAttribute("disabled", "");
+      } else {
+        nextBtn.setAttribute("disabled", "");
+        nextBtnMobile.setAttribute("disabled", "");
+      }
+      if (Tenure.value == 0) {
+        nextBtn.setAttribute("disabled", "");
+        nextBtnMobile.setAttribute("disabled", "");
+      }
+    }
+
+    function InputTenureSlider() {
+      Tenure.value = tenureOutput.html();
+      const PR = amountOutput.value * 0.035;
+      setSliderValue("tenureSlider");
+      if (
+        Tenure.value == 0 ||
+        amountOutput.value < 10000 ||
+        amountOutput.value > 50000
+      ) {
+        updateStates();
+      } else {
+        EMI.innerHTML = `₹ ${(
+          PR *
+          (Math.pow(1.045, Tenure.value) / (Math.pow(1.045, Tenure.value) - 1))
+        ).toFixed(2)} /month*`;
+        EMIFooter.innerHTML = `₹ ${(
+          PR *
+          (Math.pow(1.045, Tenure.value) / (Math.pow(1.045, Tenure.value) - 1))
+        ).toFixed(2)} /month`;
+        document.getElementById("rateOfInterest").innerHTML = "3.5% p.a.";
+        document.getElementById("rateOfInterestFooter").innerHTML = "3.5% p.a.";
+        document.getElementById("processingFee").innerHTML = "₹ 499";
+        document.getElementById("processingFeeFooter").innerHTML = "₹ 499";
+      }
+
+      tenurePeriod.innerHTML = `${
+        tenureOutput.html() == 0 ? "-" : `${tenureOutput.html()} months`
+      }
+        `;
+
+      if (validateForm1()) {
+        nextBtn.removeAttribute("disabled", "");
+        nextBtnMobile.removeAttribute("disabled", "");
+      } else {
+        nextBtn.setAttribute("disabled", "");
+        nextBtnMobile.setAttribute("disabled", "");
+      }
+      if (tenureOutput.html() == 0) {
+        nextBtn.setAttribute("disabled", "");
+        nextBtnMobile.setAttribute("disabled", "");
+      }
+    }
+
+    function handleSubmit1() {
+      document.getElementById("accordion-btn2").click();
+      document.getElementById("step-1-completed").style.opacity = 1;
+      document.getElementById("stepper-progress-line").style.borderColor =
+        "#00b1f2";
+      document.getElementById("accordion-btn1").style.color = "black";
+      document
+        .getElementById("bullet2")
+        .classList.replace("stepper-bullet2", "stepper-bullet1");
+      setTimeout(() => {
+        document.getElementById("accordion-btn1").style.paddingBottom = "18px";
+      }, 260);
+      if (
+        !(
+          Tenure.value == 0 ||
+          amountOutput.value < 10000 ||
+          amountOutput.value > 50000
+        )
+      ) {
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        } else {
+          confirmBtn.setAttribute("disabled", "");
+          confirmBtnMobile.setAttribute("disabled", "");
+        }
+      } else {
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+      }
+    }
+
+    function myFn() {
+      const a = document
+        .getElementById("accordion-btn1")
+        .getAttribute("aria-expanded");
+      if (a == "true") {
+        document.getElementById("accordion-btn1").style.paddingBottom = "0";
+        document
+          .getElementById("bullet1")
+          .classList.replace("stepper-bullet2", "stepper-bullet1");
+        document
+          .getElementById("bullet2")
+          .classList.replace("stepper-bullet1", "stepper-bullet2");
+      } else {
+        setTimeout(() => {
+          document.getElementById("accordion-btn1").style.paddingBottom =
+            "18px";
+        }, 260);
+      }
+    }
+
+    (function () {
+      AccountDetails.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "dropdown-select-menu-item"
+          ).innerHTML += `<div data-index='${index}' class="cards flex align-items-center item p-2">
+    <img src="../images/document.svg" class="img-fluid"
+    style="margin-right: 10px;height: 24px;width: 24px;" />
+    <div>
+      <div class="font-14 font-600">xxxxxxxxxx789</div>
+      <div class="mt-1 font-10 text-gray">${e.details}</div>
+      </div>
+      </div>`)
+      );
+      const cards = document.getElementsByClassName("cards");
+      for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", (e) => getData(e));
+      }
+
+      TenureInMonths.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "dropdown-select-tenure-item"
+          ).innerHTML += `<div data-index='${index}' class="tenureCards px-2 py-1">
+      <div class="font-18" style="font-weight:300">${e.id}</div>
+      </div>`)
+      );
+      const tenureCards = document.getElementsByClassName("tenureCards");
+      for (let i = 0; i < tenureCards.length; i++) {
+        tenureCards[i].addEventListener("click", (e) => getTenureData(e));
+      }
+    })();
+
+    // ----------------------------------------------------------------------------------------------
+    // ------------------------------------------ Encash Step 2 ------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+
+    (function () {
+      if (document.forms["form2"]["name"].value) {
+        document.forms["form2"]["name"].classList.add("touched");
+      }
+    })();
+    function setErrors(id, error) {
+      if (id == "otpError") {
+        document.getElementById("otpFormError").innerHTML = error;
+      }
+      if (id == "name") {
+        document.getElementById("formError3").innerHTML = error;
+      }
+      if (id == "confirmAccount") {
+        document.getElementById("formError2").innerHTML = error;
+        document.getElementById(
+          "error-message2"
+        ).innerHTML = ` <img src="../images/error.svg" class="img-fluid position-absolute mt-1 top-0"
+                      style="height: 12px;width: 13px;right: 5px;cursor:default" />`;
+      }
+      if (id == "slider-amount") {
+        document.getElementById("formError1").innerHTML = error;
+        document.getElementById(
+          "error-message3"
+        ).innerHTML = ` <img src="../images/error.svg" class="img-fluid position-absolute mt-3 top-0"
+                      style="height: 12px;width: 13px;right: 5px;cursor:default" />`;
+      }
+      if (id == "ifsc") {
+        document.getElementById("formError4").innerHTML = error;
+      }
+    }
+
+    function validateIfsc() {
+      var returnvalue = true;
+      var ifsc = document.forms["form2"]["ifsc"];
+      if (ifsc.value.match(/\s/g)) {
+        ifsc.value.replace(/\s/g, "");
+      }
+      if (!ifsc.value.match(/[^A-Za-z0-9]/)) {
+        ifsc.style.borderColor = "";
+        setErrors("ifsc", "");
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        }
+      } else {
+        setErrors("ifsc", "invalid IFSC");
+        ifsc.style.borderColor = "red";
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+        return (returnvalue = false);
+      }
+      return returnvalue;
+    }
+
+    function validateFormForAccount() {
+      var returnvalue = true;
+      var confirmAccount = document.forms["form2"]["confirmAccount"];
+      var accountNo = $("#accountNumber").html();
+      if (accountNo != confirmAccount.value) {
+        setErrors("confirmAccount", "Does not match");
+        confirmAccount.style.borderColor = "red";
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+        return (returnvalue = false);
+      } else {
+        document.getElementById(
+          "error-message2"
+        ).innerHTML = `<img src="../images/green-tick.svg" class="img-fluid position-absolute top-0"
+                      style="height: 12px;width: 13px;right: 5px;cursor:default;margin-top:6px" />`;
+        confirmAccount.style.borderColor = "";
+        document.getElementById("formError2").innerHTML = "";
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        }
+      }
+      if (confirmAccount.value.length == 0) {
+        setErrors("confirmAccount", "Required field");
+        confirmAccount.style.borderColor = "red";
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+        return (returnvalue = false);
+      } else {
+        confirmAccount.style.borderColor = "";
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        }
+      }
+      return returnvalue;
+    }
+
+    function validateFormForName() {
+      var returnvalue = true;
+      var name = document.forms["form2"]["name"];
+      if (name.value.trim().length == 0) {
+        setErrors("name", "Required field");
+        name.style.borderColor = "red";
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+        return (returnvalue = false);
+      } else {
+        name.style.borderColor = "";
+        document.getElementById("formError3").innerHTML = "";
+
+        if (
+          !(
+            Tenure.value == 0 ||
+            amountOutput.value < 10000 ||
+            amountOutput.value > 50000
+          )
+        ) {
+          if ($("#checkbox").is(":checked")) {
+            confirmBtn.removeAttribute("disabled", "");
+            confirmBtnMobile.removeAttribute("disabled", "");
+          } else {
+            confirmBtn.setAttribute("disabled", "");
+            confirmBtnMobile.setAttribute("disabled", "");
+          }
+        } else {
+          confirmBtn.setAttribute("disabled", "");
+          confirmBtnMobile.setAttribute("disabled", "");
+        }
+      }
+      return returnvalue;
+    }
+
+    function enableConfirmBtn() {
+      if (
+        validateFormForAccount() &&
+        validateFormForName() &&
+        validateIfsc() &&
+        !(
+          Tenure.value == 0 ||
+          amountOutput.value < 10000 ||
+          amountOutput.value > 50000
+        )
+      ) {
+        if ($("#checkbox").is(":checked")) {
+          confirmBtn.removeAttribute("disabled", "");
+          confirmBtnMobile.removeAttribute("disabled", "");
+        } else {
+          confirmBtn.setAttribute("disabled", "");
+          confirmBtnMobile.setAttribute("disabled", "");
+        }
+      } else {
+        confirmBtn.setAttribute("disabled", "");
+        confirmBtnMobile.setAttribute("disabled", "");
+      }
+    }
+
+    function handleSubmit2(e) {
+      window.location.href = "#generateOtp";
+      document.getElementById("accordion-btn2").click();
+      document.getElementById("accordion-btn2").style.color = "#2d2d2d";
+      document.getElementById("step-2-completed").style.opacity = 1;
+      document.getElementById("stepper-progress-line").style.borderColor =
+        "#00b1f2";
+    }
+
+    function myFn2() {
+      const a = document
+        .getElementById("accordion-btn2")
+        .getAttribute("aria-expanded");
+      if (a == "true") {
+        setTimeout(() => {
+          document.getElementById("accordion-btn1").style.paddingBottom =
+            "18px";
+        }, 260);
+        document
+          .getElementById("bullet2")
+          .classList.replace("stepper-bullet2", "stepper-bullet1");
+        document
+          .getElementById("bullet1")
+          .classList.replace("stepper-bullet1", "stepper-bullet2");
+      } else {
+      }
+    }
+  </script>
+</html>

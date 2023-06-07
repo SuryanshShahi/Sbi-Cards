@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link href="../main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="../custom-styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bundle.js"></script>
+  </head>
+
+  <body style="background-color: #f5f5f5">
+    <div id="not-eligible">
+      <div class="py-19 d-flex bg-white align-items-center sbi-navbar">
+        <a href="https://www.sbicard.com/"
+          ><img src="../images/sbi-logo.svg" class="img-fluid"
+        /></a>
+        <div class="fw-bold sbi-exit-btn">Exit</div>
+      </div>
+      <div class="mt-md-4 mt-lg-4 bg-white mx-auto sbi-not-eligible">
+        <div
+          class="text-md-start row mx-0 gx-0 text-lg-start text-center sbi-not-eligible-upper-section"
+        >
+          <div class="col-lg-6 col-md-6 p-0 order-lg-1 order-md-1 order-2">
+            <div class="mx-auto">
+              <p class="mx-md-0 mx-lg-0 mx-auto font-20 m-0">
+                Sorry! You are currently not eligible for Encash and Encash
+                Inline
+              </p>
+              <div class="font-14 mt-20 subheading-1">
+                Submit your request for Encash and Encash Inline
+              </div>
+              <div class="d-flex flex-column">
+                <label
+                  for="sbi-sample2"
+                  class="sbi-input-label sbi-input-text mx-md-0 mx-lg-0 mx-auto"
+                  id="new-pin-input"
+                >
+                  <input
+                    type="number"
+                    name="new-pin-input"
+                    id="sbi-sample2"
+                    class="bg-transparent"
+                    style="border-radius: 0 !important; max-width: 380px"
+                  />
+                  <span class="placeholder">Desired Amount (₹)</span>
+                </label>
+                <div
+                  class="d-flex mt-40 justify-content-md-start justify-content-lg-start flex-sm-row flex-column justify-content-center align-items-center"
+                >
+                  <a
+                    href="#eligibility-modal"
+                    class="sbi-link text-white"
+                    role="dialog"
+                    id="eligibility"
+                  >
+                    <button
+                      class="sbi-button sbi-submit-btn mr-40 font-600 primary mb-sm-0 mb-20"
+                      type="button"
+                    >
+                      Submit Request
+                    </button></a
+                  >
+                  <a
+                    class="sbi-link underlined mb-sm-0 mb-10"
+                    style="font-weight: 400; font-size: 16px"
+                    href="/login"
+                  >
+                    Back to Home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 col-md-6 order-lg-2 justify-content-md-end justify-content-center flex p-0 order-md-2 order-1 imageWrapper"
+          >
+            <img
+              src="../images/service-request.svg"
+              class="img-fluid"
+              style="height: 233px"
+            />
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="text-center d-md-block d-lg-block font-600 d-none mt-40">
+            Benefits
+          </div>
+          <div
+            class="row gx-0 justify-content-center px-20 mx-0 flex font-14 mt-40 lowerSectionWrapper"
+            style="color: #8a8a96"
+          >
+            <div class="col-md-3 col-lg-3 p-0">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+              >
+                <img
+                  src="../images/money.svg"
+                  class="img-fluid"
+                  style="height: 37.5px; width: 41.8px"
+                />
+                <div>Convenience of paying in easy EMIs</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 p-0 mx-md-5 mx-lg-5">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+                id="middle-icon"
+              >
+                <img
+                  src="../images/interest.svg"
+                  class="img-fluid"
+                  style="height: 37.5px; width: 41.8px"
+                />
+                <div>Low rate of interest and flexible tenure options</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 p-0">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+                style="max-width: 174px"
+              >
+                <img src="../images/time.svg" class="img-fluid last-icon" />
+                <div>Fulfill your extra cash needs instantly</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="eligibility-modal" class="modal" role="dialog">
+        <div
+          class="modal-body text-center flex flex-col justify-content-center"
+          style="padding-inline: 54px; font-family: Open Sans, sans-serif"
+        >
+          <img
+            src="../images/not-eligible.png"
+            class="img-fluid mx-auto"
+            style="max-height: 199px"
+          />
+
+          <h2 class="font-24 font-bold my-20" id="thank-you">
+            Thank you for showing your interest in Encash and Encash Inline
+          </h2>
+          <p class="m-0 font-14 mx-auto" style="max-width: 330px">
+            We will share the update in the next 48 to 72 hours on your
+            registered mobile number XXXXXX1234
+          </p>
+          <button
+            id="modal-btn"
+            class="sbi-button primary mt-30 mx-auto"
+            style="margin-bottom: 0; width: fit-content"
+            onClick="window.location.href='/login'"
+          >
+            Back to home
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+#encash-select .sbi-navbar {
+  padding-inline: 130px;
+}
+
+#encash-select .sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#encash-select .sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+#encash-select .sbi-benefit-items {
+  max-width: 180px;
+  display: block;
+}
+#encash-select .icons-description {
+  margin-top: 10px;
+}
+#encash-select #lower-section {
+  max-width: 1020px;
+  min-height: calc(100vh - 85px);
+}
+#encash-select #congrats {
+  margin-bottom: 10px !important;
+}
+#encash-select .sbi-button {
+  margin-bottom: 60px !important;
+}
+@media (max-width: 990px) {
+  #encash-select .sbi-navbar {
+    padding-inline: 40px !important;
+  }
+  #encash-select .sbi-button {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #encash-select .upper-section {
+    margin-top: 0;
+  }
+}
+@media (max-width: 575px) {
+  #encash-select .sbi-navbar {
+    padding-inline: 20px !important;
+  }
+  #encash-select .middle-section {
+    display: block !important;
+  }
+  #encash-select #congrats {
+    margin-bottom: 20px !important;
+  }
+  #encash-select .middle-section .col-sm-5,
+  #encash-select .middle-section .col-sm-2 {
+    max-width: 100%;
+  }
+  #encash-select .sbi-benefit-items {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #encash-select #encash-select-card-wrapper-mobile {
+    margin-top: 30px !important;
+  }
+  #encash-select .icons-description {
+    margin-top: 0;
+  }
+  #encash-select .sbi-benefit-items > div {
+    padding-left: 14px;
+  }
+  #encash-select #middle-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #encash-select .sbi-benefit-items img {
+    max-width: 26px;
+    height: 26px !important;
+  }
+
+  #encash-select #middle-section-wrapper {
+    max-width: 100% !important;
+  }
+  #encash-select #middle-section {
+    background-color: #f2f7fd;
+    padding-bottom: 30px;
+    padding-inline: 20px;
+    justify-content: center;
+  }
+
+  #encash-select .sbi-button {
+    width: 100% !important;
+  }
+  #encash-select .sbi-def-radio {
+    height: 132px !important;
+    width: 181px !important;
+    top: -10px;
+    left: -10px;
+  }
+  #encash-select #card11,
+  #encash-select #card21 {
+    max-width: 181px !important;
+  }
+  #encash-select #lower-section {
+    min-height: calc(100vh - 54px);
+  }
+}
+@media (max-width: 405px) {
+  #encash-select #encash-select-card-wrapper-mobile {
+    gap: 20px !important;
+  }
+  #encash-select .sbi-button {
+    width: 100% !important;
+    max-width: 353px !important;
+  }
+  #encash-select .sbi-def-radio {
+    height: 134px !important;
+    width: 165px !important;
+    top: -11px;
+    left: -11px;
+  }
+  #encash-select #radio-btn-1 {
+    height: 132px !important;
+    width: 164px !important;
+    top: -10px !important;
+    left: -10px;
+  }
+  #encash-select #card11,
+  #encash-select #card21 {
+    max-width: 165px !important;
+  }
+}
+
+#encash-select .sbi-radio-btn::before {
+  width: 12px;
+  height: 12px;
+  margin: 7.5px !important;
+  top: 0;
+  left: 0;
+}

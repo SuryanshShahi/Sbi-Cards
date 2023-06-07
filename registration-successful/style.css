@@ -1,0 +1,138 @@
+.sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+.sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+#registration-successful .sbi-navbar {
+  padding-inline: 130px;
+}
+
+.upper-section .encash-logo {
+  width: 157px;
+  height: 120px;
+}
+#registration-successful .upper-section {
+  background-color: #f2f7fd;
+  box-shadow: 0 1px 10px 0 rgba(213, 213, 234, 0.81);
+}
+#registration-successful .row {
+  max-width: 1020px;
+}
+#registration-successful .row .left-label {
+  max-width: 160px;
+}
+
+#registration-successful .lower-section {
+  margin-top: 20px;
+  max-width: 1020px;
+  margin-bottom: 80px;
+}
+#registration-successful .lower-section .header-border {
+  border: solid 1px #f2f2fd;
+}
+#registration-successful .lower-section.registration {
+  padding-top: 20px;
+}
+
+@media (max-width: 990px) {
+  #registration-successful .sbi-navbar {
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lower-section {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .lower-section .encash-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  #registration-successful .upper-section {
+    box-shadow: none;
+    position: fixed;
+    z-index: -1;
+    top: 60px;
+  }
+  .lower-section .encash-title {
+    padding-top: 0;
+  }
+  #registration-successful .lower-section {
+    margin-top: 0px;
+  }
+  #registration-successful .lower-section .sbi-button {
+    width: 100% !important;
+  }
+  #registration-successful .e-mandate {
+    font-size: 20px;
+  }
+  #registration-successful .retry {
+    font-size: 14px;
+  }
+  #registration-successful .sbi-navbar {
+    padding-inline: 20px;
+    top: 0;
+    position: sticky;
+    z-index: 20;
+    box-shadow: 0px 0px 2px 0px silver;
+  }
+  #registration-successful .dynamicData {
+    margin-top: 30px;
+  }
+  #registration-successful .lower-section #successful {
+    font-size: 20px;
+  }
+  #registration-successful .lower-section .user-details,
+  #registration-successful .lower-section #reference,
+  #registration-successful .lower-section .resume-encash {
+    font-size: 14px !important;
+  }
+  #registration-successful .lower-section #click-here,
+  #registration-successful .lower-section #click-here a {
+    padding-top: 20px !important;
+    font-size: 14px !important;
+  }
+
+  .bottomSheetWrapper {
+    background-color: white;
+    margin-top: 168px;
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 442px) {
+  .bottomSheetWrapper {
+    margin-top: 182px;
+  }
+}
+
+#upper-section {
+  max-height: 221px;
+  transition: all 0.5s;
+}
+.animate-scale-to-zero {
+  max-height: 0px !important;
+  transition: all 0.5s;
+}
+
+#registration-successful .column2 img {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+a[href^="tel"] {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}

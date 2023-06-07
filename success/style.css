@@ -1,0 +1,100 @@
+#service-request .sbi-navbar {
+  padding-inline: 130px;
+}
+#service-request .sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+
+#service-request .table-row > div:nth-child(2) {
+  color: #000;
+  margin-bottom: 28px;
+  margin-left: auto;
+}
+#service-request #lower-section {
+  padding-inline: 15px;
+}
+
+#service-request .table-row > div:nth-child(2) {
+  color: #2d2d2d;
+}
+
+@media (max-width: 990px) {
+  #service-request .sbi-navbar {
+    padding-inline: 40px;
+  }
+}
+@media (max-width: 575px) {
+  #service-request #buttonWrapper {
+    display: block;
+    text-align: center;
+  }
+
+  #service-request .sub-title {
+    font-size: 20px;
+  }
+  #service-request .mobile-table {
+    margin-bottom: 20px !important;
+  }
+  #service-request #service-img {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  #service-request #lower-section {
+    padding: 0 20px !important;
+  }
+
+  #service-request p {
+    font-size: 14px !important;
+  }
+  #service-request #buttonWrapper > div {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  #service-request #table {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  #service-request .table-row > div:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  #service-request .sbi-navbar {
+    padding-inline: 20px;
+  }
+  #service-request .sbi-button {
+    font-size: 14px;
+    height: 38px;
+  }
+  #service-request .sbi-link {
+    font-size: 14px;
+    height: 38px;
+  }
+  #service-request .successBtn1 {
+    width: 100% !important;
+    height: 56px;
+    margin-top: 40px;
+  }
+  #service-request .availEncash {
+    gap: 10px !important;
+  }
+  #service-request .sbi-button {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  #service-request .availEncash > img {
+    height: 50px !important;
+    width: 50px !important;
+  }
+  #service-request #unableTocompleteBtn {
+    height: 56px !important;
+  }
+}
+
+a[href^="tel"] {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}

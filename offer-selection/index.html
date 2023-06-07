@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="../main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="../custom-styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bundle.js"></script>
+  </head>
+
+  <body style="background-color: #f5f5f5">
+    <div id="offer-selection">
+      <div class="py-19 d-flex bg-white align-items-center sbi-navbar">
+        <a href="https://www.sbicard.com/"
+          ><img src="../images/sbi-logo.svg" class="img-fluid"
+        /></a>
+        <div class="fw-bold sbi-exit-btn">Exit</div>
+      </div>
+      <div class="upper-section" id="upper-section">
+        <div class="row m-0 gx-0 py-20 mx-auto">
+          <div class="col-md-6 col-sm-6 col-lg-6 flex align-items-center">
+            <img
+              src="../images/encash-offer.png"
+              class="img-fluid mr-20 encash-logo"
+            />
+            <div
+              class="left-label font-18 font-600 d-lg-block d-md-block d-sm-block d-lg-block d-none"
+            >
+              Instant funds on your card
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-6 column2 font-14">
+            <div class="font-14 font-600" style="margin-bottom: 12px">
+              Offer Benefits:
+            </div>
+            <div class="d-flex align-items-center">
+              <img
+                src="../images/badge.svg"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">
+                Encash offer will be over and above your credit limit
+              </p>
+            </div>
+            <div class="d-flex align-items-center my-10">
+              <img
+                src="../images/arrow.png"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">Low rate of interest</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img
+                src="../images/document.svg"
+                class="img-fluid"
+                style="width: 21.33px; height: 22.3px"
+              />
+              <p class="my-0 ml-10">Zero Documentation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative bottomSheetWrapper" id="bottomSheetWrapper">
+        <div
+          class="pb-20 d-sm-none d-lg-none d-md-none"
+          onclick="bottomSheet()"
+        >
+          <div
+            class="flex justify-content-center bg-white w-100 py-10"
+            style="box-shadow: 0 0 5px 0 #d5d5ea"
+          >
+            <img src="../images/dots.svg" class="img-fluid" />
+          </div>
+        </div>
+        <div class="lower-section bg-white mx-auto pb-10" id="lower-section">
+          <div class="font-18 font-600 mb-10 px-20 encash-title">Encash</div>
+          <p class="m-0 font-14 text-gray px-20">
+            You have a pre-approved Encash offer over & above your card’s limit
+            at nominal interest rate. Valid till Mar, 15 2022
+          </p>
+          <div class="header-border my-20"></div>
+          <div class="d-md-flex d-block p-20 gap-5" id="nach-section">
+            <img
+              src="../images/nach.png"
+              class="order-md-2 order-1"
+              style="height: 40px; width: 150px; margin-left: auto"
+            />
+            <div class="order-md-1 order-2" style="max-width: 672px">
+              <p class="m-0 fw-bold">
+                Please subscribe for e-NACH facility to avail Encash offer.
+                e-NACH enables you to pay your credit card dues automatically.
+              </p>
+              <p class="m-0 font-14 text-gray pt-20">
+                e-Mandate is a digital payment service initiated by the RBI and
+                the National Payments Corporation of India (NPCI).
+              </p>
+            </div>
+          </div>
+          <div class="header-border mb-20"></div>
+          <div class="px-20">
+            <div class="font-14 fw-bold">Benefits of e-NACH</div>
+            <ul class="font-14 text-gray mt-10 p-0" style="margin-left: 28px">
+              <li>Instant and hassle free registration.</li>
+              <li class="my-20">
+                Straightforward authorized process through net-banking and debit
+                card.
+              </li>
+              <li>
+                Self-help process with round the clock availability from
+                anywhere.
+              </li>
+            </ul>
+          </div>
+          <div class="header-border my-20"></div>
+          <div class="px-20">
+            <div class="font-14 fw-bold">Steps for Registration</div>
+            <div class="font-14 text-gray my-20">
+              Find below the steps for registration of eNach
+            </div>
+            <div class="flex">
+              <div class="px-10 position-relative stepper-line">
+                <div id="stepper-progress-line"></div>
+              </div>
+              <div class="font-14 steps">
+                <div class="flex position-relative">
+                  <div
+                    id="step-1-completed"
+                    class="rounded-circle position-absolute flex align-items-center justify-content-center"
+                  >
+                    <img src="../images/tick.png" class="img-fluid" />
+                  </div>
+                  <p class="m-0 pl-8">
+                    Step 1: Click the enrollment tab and you will be redirected
+                    to the registration form page
+                  </p>
+                </div>
+                <div class="my-20 flex position-relative">
+                  <div
+                    id="step-1-completed"
+                    class="rounded-circle flex align-items-center justify-content-center position-absolute"
+                  >
+                    <img src="../images/tick.png" class="img-fluid" />
+                  </div>
+                  <p class="m-0 pl-8">
+                    Step 2: Validate the pre-filled data and enter the bank
+                    details
+                  </p>
+                </div>
+                <div class="flex position-relative">
+                  <div
+                    id="step-1-completed"
+                    class="rounded-circle flex align-items-center justify-content-center position-absolute"
+                  >
+                    <img src="../images/tick.png" class="img-fluid" />
+                  </div>
+                  <p class="m-0 pl-8">
+                    Step 3: Complete the e-mandate form and chose one of the
+                    following options for authentication - Net-banking/Debit
+                    card
+                  </p>
+                </div>
+                <div class="mt-20 flex position-relative">
+                  <div
+                    id="step-1-completed"
+                    class="rounded-circle flex align-items-center justify-content-center position-absolute"
+                  >
+                    <img src="../images/tick.png" class="img-fluid" />
+                  </div>
+                  <p class="m-0 pl-8">
+                    Step 4: You will get a reference no. and mandate
+                    registration confirmation on screen, however NACH activation
+                    on your credit card will take 4 working days
+                  </p>
+                  <div
+                    class="bg-white text-white h-100 position-absolute last-stepper"
+                    style="left: -13px; top: 15px"
+                  >
+                    .
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-border my-20"></div>
+          <div class="px-20">
+            <div class="font-14 fw-bold">
+              Select the payment type you wish to be auto-debited every month
+            </div>
+            <div
+              class="flex font-14 mt-20"
+              id="radio-wrapper"
+              style="gap: 40px"
+            >
+              <div class="flex align-items-center">
+                <label class="sbi-label-radio m-0">
+                  <input
+                    class="sbi-def-radio"
+                    type="radio"
+                    name="toss"
+                    id="radio-1"
+                    oninput="checkRadio()"
+                    checked
+                  />
+                  <div
+                    class="sbi-radio-btn"
+                    style="height: 17px; width: 17px"
+                  ></div>
+                </label>
+
+                <div class="pl-10" id="radio-label-1">Minimum Amount Due</div>
+              </div>
+              <div class="flex align-items-center">
+                <label class="sbi-label-radio m-0">
+                  <input
+                    class="sbi-def-radio"
+                    id="radio-2"
+                    type="radio"
+                    name="toss"
+                    oninput="checkRadio()"
+                  />
+                  <div
+                    class="sbi-radio-btn"
+                    style="height: 17px; width: 17px"
+                  ></div>
+                </label>
+
+                <div class="pl-10 text-gray" id="radio-label-2">
+                  Total Amount Due
+                </div>
+              </div>
+            </div>
+
+            <a href="#disclaimer">
+              <button
+                type="button"
+                id="next-btn"
+                class="sbi-button font-600 primary mt-40 mb-0"
+              >
+                Proceed
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="disclaimer" class="modal" role="dialog">
+      <div
+        class="modal-body text-center flex align-items-center font-14 position-relative"
+        style="padding-inline: 55px; font-family: Open Sans, sans-serif"
+      >
+        <div
+          class="position-absolute ml-20"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="handleCancel()"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div>
+          <div class="font-28 fw-bold disclaimer-title">Disclaimer</div>
+          <p class="m-0 text-gray" style="text-align: justify">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p class="m-0 text-gray" style="text-align: justify">
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.
+          </p>
+          <div
+            class="d-sm-flex mx-auto align-items-center mt-40"
+            id="proceedBtnWrapper"
+            style="width: fit-content"
+          >
+            <button
+              type="button"
+              class="sbi-button font-600 primary mx-auto mb-0"
+              onclick="handleCancel()"
+            >
+              Proceed
+            </button>
+            <div
+              class="sbi-link underlined ml-40"
+              style="font-weight: 400; font-size: 16px"
+              onclick="handleCancel()"
+            >
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function bottomSheet() {
+      const drawer = document.getElementById("upper-section");
+      const lowerSection = document.getElementById("lower-section");
+      const bottomSheetWrapper = document.getElementById("bottomSheetWrapper");
+      drawer.classList.toggle("animate-scale-to-zero");
+      if (drawer.getAttribute("class").includes("animate-scale-to-zero")) {
+        drawer.style.position = "relative";
+        drawer.style.top = "0";
+        drawer.style.transition = "none";
+        bottomSheetWrapper.style.marginTop = "0";
+        lowerSection.style.minHeight = "calc(100vh - 80px)";
+      } else {
+        drawer.style.position = "fixed";
+        drawer.style.top = "60px";
+        bottomSheetWrapper.style.marginTop = "168px";
+        lowerSection.style.minHeight = "calc(100vh - 280px)";
+      }
+    }
+    function handleCancel(e) {
+      window.location.href = "#";
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+    function checkRadio() {
+      if ($("#radio-1").is(":checked")) {
+        document.getElementById("radio-label-1").style.color = "#2d2d2d";
+        document.getElementById("radio-label-2").style.color = "#8a8a96";
+      } else {
+        document.getElementById("radio-label-2").style.color = "#2d2d2d";
+        document.getElementById("radio-label-1").style.color = "#8a8a96";
+      }
+    }
+  </script>
+</html>

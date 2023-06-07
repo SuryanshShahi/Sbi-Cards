@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link href="../main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="../custom-styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bundle.js"></script>
+  </head>
+
+  <body style="background-color: #f5f5f5">
+    <div id="not-eligible">
+      <div class="py-19 d-flex bg-white align-items-center sbi-navbar">
+        <a href="https://www.sbicard.com/"
+          ><img src="../images/sbi-logo.svg" class="img-fluid"
+        /></a>
+        <div class="fw-bold sbi-exit-btn">Exit</div>
+      </div>
+      <div class="mt-md-4 mt-lg-4 bg-white mx-auto sbi-not-eligible">
+        <div
+          class="text-md-start m-0 row gx-0 text-lg-start text-center sbi-not-eligible-upper-section"
+        >
+          <div class="col-lg-6 col-md-6 p-0 order-lg-1 order-md-1 order-2">
+            <div class="mx-auto">
+              <p class="mx-md-0 mx-lg-0 mx-auto font-20 m-0">
+                Sorry! You are not currently eligible for Encash and Encash
+                Inline on your card
+              </p>
+              <div class="my-20 font-14">Check offer on your other cards</div>
+              <div
+                class="relative mx-auto mx-lg-0"
+                id="custom-select-menu"
+                style="max-width: 380px"
+              >
+                <div class="flex customBtn position-relative" id="dropDown">
+                  <div
+                    name="accountNumber"
+                    class="font-600"
+                    style="font-size: 14px"
+                    id="accountNumber"
+                  >
+                    Primary Card No. XXXXXX43912
+                  </div>
+                  <img
+                    src="../images/arrow-down.svg"
+                    id="arrow-down"
+                    class="img-fluid"
+                    style="margin-left: auto"
+                  />
+                </div>
+                <div
+                  class="bg-white position-absolute d-none"
+                  style="max-width: 380px"
+                  id="dropdown-select-menu"
+                >
+                  <div id="dropdown-select-menu-item"></div>
+                </div>
+              </div>
+              <div class="mt-40" id="initialBtnActive">
+                <button
+                  type="button"
+                  class="sbi-button sbi-submit-btn primary font-600 mb-md-0 mb-20"
+                  onClick="window.location.href='/login'"
+                >
+                  Back to Home
+                </button>
+              </div>
+              <div class="d-none" id="btnActive">
+                <div
+                  class="d-flex mt-40 justify-content-md-start justify-content-lg-start flex-sm-row flex-column justify-content-center align-items-center"
+                >
+                  <a
+                    href="#eligibility-modal"
+                    class="sbi-link text-white"
+                    role="dialog"
+                    id="eligibility"
+                  >
+                    <button
+                      class="sbi-button sbi-submit-btn mr-40 font-600 primary mb-sm-0 mb-20"
+                      type="button"
+                    >
+                      Check Eligibility
+                    </button></a
+                  >
+                  <a
+                    class="sbi-link underlined mb-sm-0 mb-10"
+                    style="font-weight: 400; font-size: 16px"
+                    href="/login"
+                  >
+                    Back to Home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 col-md-6 p-0 justify-content-md-end justify-content-center flex order-lg-2 order-md-2 order-1 imageWrapper"
+          >
+            <img
+              src="../images/not-eligible-page-2.png"
+              style="max-height: 233px; height: 100%"
+            />
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="text-center d-md-block d-lg-block font-600 d-none mt-40">
+            Benefits
+          </div>
+          <div
+            class="row gx-0 justify-content-center px-20 mx-0 flex font-14 mt-40 lowerSectionWrapper"
+            style="color: #8a8a96"
+          >
+            <div class="col-md-3 col-lg-3 p-0">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+              >
+                <img
+                  src="../images/money.svg"
+                  class="img-fluid"
+                  style="height: 37.5px; width: 41.8px"
+                />
+                <div>Convenience of paying in easy EMIs</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 p-0 mx-md-5 mx-lg-5">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+                id="middle-icon"
+              >
+                <img
+                  src="../images/interest.svg"
+                  class="img-fluid"
+                  style="height: 37.5px; width: 41.8px"
+                />
+                <div>Low rate of interest and flexible tenure options</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 p-0">
+              <div
+                class="text-md-center text-lg-center mx-auto sbi-benefit-items"
+                style="max-width: 174px"
+              >
+                <img src="../images/time.svg" class="img-fluid last-icon" />
+                <div>Fulfill your extra cash needs instantly</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="eligibility-modal" class="modal" role="dialog">
+      <div
+        class="modal-body text-center position-relative"
+        style="padding-inline: 80px; font-family: Open Sans, sans-serif"
+      >
+        <div
+          class="position-absolute ml-20 d-sm-none d-block"
+          style="left: 0; top: 46px; cursor: pointer"
+          onclick="window.location.href = '#'"
+        >
+          <img src="../images/arrow-left.svg" class="img-fluid" />
+        </div>
+        <div class="font-28 fw-bold mb-40 currentlyUnable">
+          Currently Not Eligible!
+        </div>
+        <p class="m-0">
+          Sorry! you are not currently eligible for Encash and Encash inline on
+          primary card no. XXXXXX23312
+        </p>
+
+        <button
+          type="button"
+          style="max-width: 180px"
+          class="sbi-button font-600 primary mx-auto mt-40 mb-0"
+          onclick="window.location.href = '#'"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const initialBtn = document.getElementById("initialBtnActive");
+    const activeBtn = document.getElementById("btnActive");
+    function valueSelected() {
+      initialBtn.classList.add("d-none");
+      activeBtn.classList.remove("d-none");
+    }
+
+    const accountDropdown = document.getElementById("dropDown");
+    const accountDropdownMenu = document.getElementById("dropdown-select-menu");
+    accountDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      accountDropdownMenu.classList.toggle("d-none");
+      document.getElementById("arrow-down").classList.toggle("rotateIcon");
+    });
+
+    document.addEventListener("click", (e) => {
+      const arrow = document.getElementById("arrow-down").getAttribute("class");
+      if (e.target.closest("#dropdown-select-menu")) return;
+      accountDropdownMenu.classList.add("d-none");
+      if (arrow.includes("rotateIcon")) {
+        document.getElementById("arrow-down").classList.toggle("rotateIcon");
+      }
+    });
+
+    const AccountDetails = [
+      {
+        id: 1,
+        name: "Primary Card No.",
+        accountNo: "XXXXXX43912",
+      },
+      {
+        id: 2,
+        name: "Supplementary Card No.",
+        accountNo: "XXXXXX23312",
+      },
+      {
+        id: 3,
+        name: "Supplementary Card No.",
+        accountNo: "XXXXXX23415",
+      },
+    ];
+
+    const getData = (e) => {
+      const index = e.currentTarget.getAttribute("data-index");
+      const data = AccountDetails[index];
+      const accNo = document.getElementById("accountNumber");
+      accNo.innerText = data.name + " " + data.accountNo;
+      document.getElementById("dropDown").click();
+      if (data.id == 1) {
+        initialBtn.classList.remove("d-none");
+        activeBtn.classList.add("d-none");
+      } else {
+        valueSelected();
+      }
+    };
+
+    (function () {
+      AccountDetails.forEach(
+        (e, index) =>
+          (document.getElementById(
+            "dropdown-select-menu-item"
+          ).innerHTML += `<div data-index='${index}' class="cards item py-20 px-10">
+    <div class="flex align-items-center gap-1 font-14">
+      <div>${e.name}</div>
+      <div>${e.accountNo}</div>
+      </div>
+      </div>`)
+      );
+      const cards = document.getElementsByClassName("cards");
+      for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", (e) => getData(e));
+      }
+    })();
+  </script>
+</html>

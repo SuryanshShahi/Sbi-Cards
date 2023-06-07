@@ -1,0 +1,668 @@
+.sbi-navbar img {
+  height: 22px;
+  width: 109px;
+  cursor: pointer;
+}
+
+.sbi-exit-btn {
+  width: fit-content;
+  font-size: 14px;
+  color: #00b1f2;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------Encash Form1------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+#encash-form1 .column2 img {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+.upper-section .encash-logo {
+  width: 157px;
+  height: 120px;
+}
+
+#encash-form1 .upper-section {
+  background-color: #f2f7fd;
+  box-shadow: 0 1px 10px 0 rgba(213, 213, 234, 0.81);
+}
+
+#encash-form1 .row {
+  max-width: 1020px;
+}
+
+#encash-form1 .sbi-navbar {
+  padding-inline: 130px;
+}
+
+#encash-form1 .sbi-footer {
+  padding-inline: 130px;
+}
+
+#encash-form1 .row .left-label {
+  max-width: 160px;
+}
+
+.lower-section {
+  margin-top: 20px;
+  max-width: 1020px;
+  min-height: calc(100vh - 280px);
+  margin-bottom: 86px;
+}
+
+.lower-section .header-border {
+  border: solid 1px #f2f2fd;
+}
+
+.lower-section .money-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.lower-section #flush-collapseOne .sbi-input-text {
+  width: 100%;
+}
+
+.lower-section select {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.lower-section .find-your-ifsc {
+  color: #00b1f2;
+  right: 0;
+  cursor: pointer;
+}
+
+.lower-section .accordion-button {
+  padding: 18px 0;
+}
+
+.lower-section .accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: #2d2d2d;
+  background-color: white;
+  border-color: black;
+}
+
+#amountSlider::-webkit-slider-thumb,
+#tenureSlider::-webkit-slider-thumb {
+  background: white;
+  height: 21px;
+  width: 21px;
+  margin-top: -0.4rem !important;
+  box-shadow: 0px 0px 2px 1px silver;
+}
+
+#amountSlider::-webkit-slider-runnable-track,
+#tenureSlider::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+#amountSlider,
+#tenureSlider {
+  background: #f5f5f5;
+  border-radius: 4.5px !important;
+  height: 7px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+#dropdown-select-menu-item .item:hover,
+#dropdown-select-tenure-item .tenureCards:hover {
+  background-color: #f2f7fd;
+  cursor: pointer;
+}
+
+.selectedBank:hover,
+.selectedCity:hover {
+  background-color: #f2f7fd;
+  cursor: pointer;
+  font-weight: 600 !important;
+}
+
+.lower-section .stepper-line {
+  width: fit-content;
+  margin-top: 56px;
+}
+
+.lower-section #stepper-progress-line {
+  border-left: 2px solid #f5f5f5;
+  width: fit-content;
+  margin-left: 7px;
+  height: calc(100% - 40px);
+}
+
+.lower-section .stepper-bullet1 {
+  border: 2px solid #00b1f2;
+  height: 16px;
+  width: 16px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: -49px;
+}
+
+.lower-section .stepper-bullet2 {
+  background-color: #f5f5f5;
+  height: 16px;
+  width: 16px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: -49px;
+}
+
+.lower-section #step-1-completed,
+.lower-section #step-2-completed {
+  height: 16px;
+  width: 16px;
+  background-color: #00b1f2;
+  z-index: 10;
+  top: 20px;
+  left: -49px;
+  opacity: 0;
+}
+
+.lower-section #step-1-completed > img,
+.lower-section #step-2-completed > img {
+  height: 12px;
+  width: 10px;
+}
+
+.lower-section .last-stepper {
+  left: -43px;
+  top: 20px;
+}
+
+.lower-section .form1-static {
+  color: #333333;
+  font-weight: 300;
+}
+
+.lower-section #custom-select-menu .customBtn {
+  border-bottom: 1px solid #8a8a96;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lower-section #dropdown-select-menu {
+  box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+  z-index: 1;
+  width: 95.5%;
+}
+
+.lower-section .hidden,
+.lower-section .hidden1,
+.lower-section .hidden2 {
+  display: none;
+}
+.rotateIcon,
+.rotateBank,
+.rotateCity {
+  transform: rotate(180deg);
+}
+
+.lower-section .rotateIconTenure {
+  transform: rotate(180deg);
+}
+
+.hidden2 {
+  display: none;
+}
+
+.rotate-ifsc-Icon {
+  transform: rotate(180deg);
+}
+
+.lower-section #custom-select-tenure .customBtn {
+  border-bottom: 1px solid #8a8a96;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lower-section #dropdown-select-tenure {
+  box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+  z-index: 1;
+  width: 95.5%;
+  overflow-y: scroll;
+}
+
+.lower-section .error-message2,
+.lower-section .error-message1 {
+  cursor: default;
+}
+
+#footer .sbi-footer {
+  background-color: #f2f7fd;
+  max-width: 100% !important;
+}
+
+#flush-collapseOne .accordion-column2 {
+  margin-top: 70px;
+}
+
+#OTPInput {
+  gap: 15px;
+}
+
+@media (max-width: 1280px) {
+  #encash-form1 .sbi-footer {
+    max-width: 1020px;
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  #encash-form1 .sbi-navbar {
+    padding-inline: 40px;
+  }
+
+  #encash-form1 .sbi-footer {
+    padding-inline: 20px;
+  }
+
+  #flush-collapseTwo #dropdown-select-menu,
+  #flush-collapseOne #dropdown-select-tenure {
+    width: 97.5% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #searchForBank .sbi-def-rad #flush-collapseTwo #dropdown-select-menu,
+  #flush-collapseOne #dropdown-select-tenure {
+    width: 97% !important;
+  }
+
+  #generateOtp .modal-body,
+  #failed .modal-body {
+    padding-inline: 20px !important;
+    padding-top: 20vh;
+  }
+
+  .lower-section .stepper-line {
+    padding-left: 12px;
+    padding-right: 20px;
+  }
+
+  .lower-section .stepper-bullet1,
+  .lower-section .stepper-bullet2 {
+    left: -29px !important;
+  }
+
+  .lower-section {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .lower-section .encash-title {
+    font-size: 20px;
+  }
+
+  .lower-section .last-stepper {
+    left: -23px !important;
+  }
+
+  .lower-section #step-1-completed,
+  .lower-section #step-2-completed {
+    left: -29px !important;
+  }
+
+  .lower-section .accordion {
+    margin-right: 12px;
+  }
+
+  .lower-section .accordion-body {
+    padding-right: 12px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #flush-collapseOne .accordion-column2 {
+    margin-top: 40px;
+  }
+
+  #flush-collapseOne .rate,
+  #flush-collapseOne .emi {
+    font-size: 20px;
+  }
+
+  #searchForBank #cardRow > :nth-child(4) {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .accordion-button::after {
+    background-image: url("../images/mobileArrow.svg") !important;
+    height: 21px !important;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("../images/mobileArrow.svg") !important;
+    height: 21px !important;
+  }
+  #findYourIfsc .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lower-section .stepper-line {
+    margin-top: 36px;
+  }
+  #flush-collapseTwo #dropdown-select-menu,
+  #flush-collapseOne #dropdown-select-tenure {
+    width: 96% !important;
+  }
+
+  #encash-form1 .sbi-navbar {
+    padding-inline: 20px;
+  }
+
+  #encash-form1 .upper-section {
+    box-shadow: none;
+    position: fixed;
+    z-index: -1;
+    top: 60px;
+  }
+
+  .bottomSheetWrapper {
+    background-color: white;
+    margin-top: 168px;
+    transition: all 0.5s;
+  }
+
+  #encash-form1 .sbi-navbar {
+    top: 0;
+    position: sticky;
+    z-index: 20;
+    box-shadow: 0px 0px 2px 0px silver;
+  }
+
+  #generateOtp p {
+    padding-bottom: 117px;
+  }
+
+  #generateOtp .oneTimeVerification,
+  #failed .currentlyUnable {
+    font-size: 20px;
+    margin-bottom: 40px !important;
+  }
+
+  #generateOtp .sbi-button,
+  #failed .sbi-button {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  #generateOtp #resendBtn {
+    font-size: 16px;
+  }
+
+  #generateOtp #otp-limit-exhausted {
+    margin-bottom: 30px;
+  }
+
+  #OTPInput input {
+    width: 29px !important;
+  }
+
+  #OTPInput {
+    gap: 36px;
+  }
+
+  #searchForBank .bankCard {
+    padding-inline: 10px;
+  }
+
+  #searchForBank .modal-body {
+    padding-inline: 9px !important;
+  }
+
+  #searchForBank .modal-body #cardRow {
+    gap: 14px !important;
+  }
+
+  #searchForBank #cardRow > :nth-child(1) {
+    max-width: 80px !important;
+    min-width: 0 !important;
+  }
+
+  #searchForBank #cardRow > :nth-child(2),
+  #searchForBank #cardRow > :nth-child(3) {
+    max-width: 116px !important;
+    min-width: 0 !important;
+  }
+
+  #searchForBank .sbi-button,
+  #searchForBank #searchForBankBtnWrapper,
+  #findYourIfsc .sbi-button,
+  #findYourIfsc #ifscBtnWrapper {
+    width: 100% !important;
+  }
+  #findYourIfsc #resetBtn,
+  #searchForBank .sbi-link {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  #findYourIfsc .modal-body {
+    padding-inline: 20px !important;
+  }
+
+  #findYourIfsc .currentlyUnable {
+    font-size: 20px !important;
+    margin-top: 0;
+  }
+  #findYourIfsc #ifscChangeFont {
+    font-size: 18px;
+  }
+  #findYourIfsc #dropdown-select-ifsc-bank {
+    max-height: 219px !important;
+  }
+  #accordionFlushExample {
+    margin-top: 2px !important;
+  }
+}
+
+@media (min-width: 575px) {
+  #encash-form1 .lower-section {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 442px) {
+  .bottomSheetWrapper {
+    margin-top: 182px;
+  }
+}
+
+@media (max-width: 425px) {
+  #flush-collapseTwo #dropdown-select-menu,
+  #flush-collapseOne #dropdown-select-tenure {
+    width: 94% !important;
+  }
+
+  #OTPInput {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  #amount-slider-input-footer,
+  #tenure-period,
+  #rateOfInterestFooter,
+  #processingFeeFooter,
+  #calculated-emi-footer {
+    font-size: 14px !important;
+  }
+
+  #encash-form1 #confirm-sm-btn {
+    margin-left: 20px !important;
+  }
+
+  #encash-form1 #amount-col {
+    max-width: 100px !important;
+  }
+}
+
+#flush-collapseTwo #custom-select-menu,
+#flush-collapseOne #custom-select-tenure {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+#dropdown.is-open {
+  display: block;
+}
+
+.is-open,
+.valueExists {
+  position: absolute;
+  top: -20px;
+  font-size: 11px;
+  color: #8a8a96;
+}
+
+.placeholder2 {
+  position: absolute;
+  top: -3px;
+  font-size: 14px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.3s;
+  line-height: 20px;
+  color: #8a8a96;
+}
+
+.valueExistsForBankDetails {
+  position: absolute;
+  top: -28px;
+  font-size: 11px;
+  color: #8a8a96;
+}
+
+.customBtn .placeholder {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.3s;
+  color: #8a8a96;
+}
+
+.customBtn .is-open,
+.customBtn .valueExists {
+  font-size: 11px;
+}
+
+#containment-wrapper {
+  width: 100%;
+}
+
+#encash-form1 input {
+  border-radius: 0px !important;
+}
+
+#searchForBankCard > :nth-child(even) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#upper-section {
+  max-height: 221px;
+  transition: all 0.5s;
+}
+
+.animate-scale-to-zero {
+  max-height: 0px !important;
+  transition: all 0.5s;
+}
+
+#accountNumber {
+  -webkit-text-security: disc;
+  line-height: 1;
+  padding-top: 4px;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#findYourIfsc .sbi-input-text input:focus + .placeholder,
+.sbi-input-text input.touched + .placeholder,
+.sbi-input-text input[value=""] + .placeholder {
+  top: -28px;
+  color: #8a8a96;
+  font-size: 11px;
+}
+
+#searchForBank .sbi-radio-btn::before {
+  width: 12px;
+  height: 12px;
+  margin: 7.5px !important;
+  top: 0;
+  left: 0;
+}
+
+.clip_path {
+  clip-path: polygon(
+    6% 100%,
+    100% 100%,
+    100% 0%,
+    6% 0%,
+    6% 10%,
+    0% 20%,
+    6% 30%
+  );
+}
+
+#findYourIfsc button:disabled {
+  cursor: not-allowed !important;
+}
+
+.accordion-button::after {
+  background-image: url("../images/chevron-copy.svg");
+  width: 21px;
+  height: 14px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../images/chevron-copy.svg");
+  width: 21px;
+  height: 14px;
+  transform: rotate(-180deg);
+}
+
+.accordion-button {
+  line-height: 20px;
+  color: #2d2d2d;
+  font-family: "Open Sans", sans-serif !important;
+}
+input {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.find-your-ifsc:hover {
+  text-decoration: underline;
+}
